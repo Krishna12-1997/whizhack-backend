@@ -4,7 +4,7 @@ module.exports = [
   {
     name: 'strapi::cors',
     config: {
-      origin: ['http://15.207.20.62:1337'], 
+      origin: ['http://3.110.97.65:3000'], 
     },
   },
   'strapi::poweredBy',
