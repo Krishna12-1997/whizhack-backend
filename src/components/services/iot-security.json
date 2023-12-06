@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_services_iot_securities",
+  "info": {
+    "displayName": "iot_security",
+    "icon": "puzzle",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title_left": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "service_links": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service-link.service-link"
+    },
+    "title_right": {
+      "type": "string"
+    },
+    "image_url": {
+      "type": "string"
+    }
+  }
+}

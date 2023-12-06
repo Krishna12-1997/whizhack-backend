@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "solution_contacts",
+  "info": {
+    "singularName": "solution-contact",
+    "pluralName": "solution-contacts",
+    "displayName": "Solution_contact",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "mobile": {
+      "type": "biginteger"
+    }
+  }
+}

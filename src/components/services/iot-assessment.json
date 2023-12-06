@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_services_iot_assessments",
+  "info": {
+    "displayName": "iot_assessment",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    }
+  }
+}

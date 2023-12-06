@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "about_cybers",
+  "info": {
+    "singularName": "about-cyber",
+    "pluralName": "about-cybers",
+    "displayName": "About_cyber",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "color_title": {
+      "type": "string"
+    },
+    "cyber_link": {
+      "displayName": "about_link_cyber",
+      "type": "component",
+      "repeatable": true,
+      "component": "training.about-link-cyber"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "bg_image_url": {
+      "type": "string"
+    },
+    "play_btn_url": {
+      "type": "string"
+    }
+  }
+}

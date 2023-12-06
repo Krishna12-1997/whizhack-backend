@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_home_product_lefts",
+  "info": {
+    "displayName": "product_left",
+    "icon": "book",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "product_button": {
+      "displayName": "Button",
+      "type": "component",
+      "repeatable": false,
+      "component": "home.button"
+    },
+    "service_box": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home.service-home"
+    },
+    "right_bg_url": {
+      "type": "string"
+    }
+  }
+}

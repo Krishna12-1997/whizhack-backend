@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_about_buttons",
+  "info": {
+    "displayName": "button",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "icon_url": {
+      "type": "string"
+    }
+  }
+}

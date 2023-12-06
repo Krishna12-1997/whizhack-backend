@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "product_contacts",
+  "info": {
+    "singularName": "product-contact",
+    "pluralName": "product-contacts",
+    "displayName": "product_contact",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "producttype": {
+      "type": "string"
+    },
+    "productname": {
+      "type": "string"
+    },
+    "contactperson": {
+      "type": "string"
+    },
+    "contactnumber": {
+      "type": "biginteger"
+    },
+    "contactemailid": {
+      "type": "email"
+    }
+  }
+}

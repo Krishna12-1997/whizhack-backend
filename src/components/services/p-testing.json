@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_services_p_testings",
+  "info": {
+    "displayName": "p_testing",
+    "icon": "attachment"
+  },
+  "options": {},
+  "attributes": {
+    "box_title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "image_url": {
+      "type": "string"
+    }
+  }
+}

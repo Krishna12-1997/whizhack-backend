@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_solution_solution_cards",
+  "info": {
+    "displayName": "solution_card",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "logo_url": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}

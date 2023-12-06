@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_about_recognitions",
+  "info": {
+    "displayName": "Recognition",
+    "icon": "briefcase"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "recognitions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::recognition.recognition"
+    }
+  }
+}

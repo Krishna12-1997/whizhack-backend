@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "industry_rights",
+  "info": {
+    "singularName": "industry-right",
+    "pluralName": "industry-rights",
+    "displayName": "Industry_right",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "button": {
+      "displayName": "button",
+      "type": "component",
+      "repeatable": false,
+      "component": "industry.button"
+    },
+    "Industry_product_type": {
+      "type": "enumeration",
+      "enum": [
+        "Finance",
+        "Banking",
+        "SME",
+        "Defense"
+      ],
+      "default": "Finance"
+    },
+    "redirect_url": {
+      "type": "string"
+    }
+  }
+}

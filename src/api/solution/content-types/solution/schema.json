@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "solutions",
+  "info": {
+    "singularName": "solution",
+    "pluralName": "solutions",
+    "displayName": "Solution_Pages",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "solution": {
+      "type": "dynamiczone",
+      "components": [
+        "solution.solution-header",
+        "solution.zero-hack"
+      ]
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "collectionName": "components_about_headers",
+  "info": {
+    "displayName": "header",
+    "icon": "cube",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "text"
+    },
+    "story": {
+      "displayName": "story",
+      "type": "component",
+      "repeatable": false,
+      "component": "about.story"
+    },
+    "management": {
+      "displayName": "Management",
+      "type": "component",
+      "repeatable": true,
+      "component": "about.management"
+    },
+    "bg_url": {
+      "type": "string"
+    },
+    "Advisor": {
+      "type": "component",
+      "repeatable": false,
+      "component": "about.management"
+    },
+    "alliance": {
+      "displayName": "Strategicalliance",
+      "type": "component",
+      "repeatable": false,
+      "component": "about.strategicalliance"
+    },
+    "partnership": {
+      "displayName": "Partnership",
+      "type": "component",
+      "repeatable": false,
+      "component": "about.partnership"
+    },
+    "recognition": {
+      "displayName": "Recognition",
+      "type": "component",
+      "repeatable": false,
+      "component": "about.recognition"
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_about_managements",
+  "info": {
+    "displayName": "Management",
+    "icon": "alien",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "position": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

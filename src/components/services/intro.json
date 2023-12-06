@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_services_intros",
+  "info": {
+    "displayName": "intro",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "play_btn_url": {
+      "type": "string"
+    }
+  }
+}

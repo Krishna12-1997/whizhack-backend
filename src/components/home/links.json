@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_home_links",
+  "info": {
+    "displayName": "links",
+    "icon": "attachment"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    }
+  }
+}

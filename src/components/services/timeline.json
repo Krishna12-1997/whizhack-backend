@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_services_timelines",
+  "info": {
+    "displayName": "timeline",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "timelines": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::timeline.timeline"
+    }
+  }
+}

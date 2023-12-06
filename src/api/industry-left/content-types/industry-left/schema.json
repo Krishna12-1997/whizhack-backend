@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "industry_lefts",
+  "info": {
+    "singularName": "industry-left",
+    "pluralName": "industry-lefts",
+    "displayName": "Industry_left"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

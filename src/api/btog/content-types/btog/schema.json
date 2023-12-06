@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "btogs",
+  "info": {
+    "singularName": "btog",
+    "pluralName": "btogs",
+    "displayName": "Btog",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "bg_url": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "btog_card": {
+      "type": "component",
+      "repeatable": true,
+      "component": "solution.solution-card"
+    }
+  }
+}

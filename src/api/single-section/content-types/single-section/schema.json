@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "single_sections",
+  "info": {
+    "singularName": "single-section",
+    "pluralName": "single-sections",
+    "displayName": "Single_section",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "icon_url": {
+      "type": "string"
+    }
+  }
+}

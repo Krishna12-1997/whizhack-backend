@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_home_box_products",
+  "info": {
+    "displayName": "box_product",
+    "icon": "archive",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "logo_url": {
+      "type": "string"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home.button"
+    }
+  }
+}

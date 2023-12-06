@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_industry_section_intros",
+  "info": {
+    "displayName": "section_intro",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "left_image_url": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "play_btn_url": {
+      "type": "string"
+    }
+  }
+}

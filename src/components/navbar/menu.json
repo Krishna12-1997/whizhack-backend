@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_navbar_menus",
+  "info": {
+    "displayName": "menu",
+    "icon": "link",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "description": {
+      "type": "text"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "icon_url": {
+      "type": "string"
+    }
+  }
+}

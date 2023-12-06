@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_home_partner_contacts",
+  "info": {
+    "displayName": "Partner_contact",
+    "icon": "book",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image_url": {
+      "type": "string"
+    },
+    "partner_contact": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home.contact"
+    },
+    "product_type": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home.links"
+    },
+    "cityname": {
+      "displayName": "City_dropdown",
+      "type": "component",
+      "repeatable": true,
+      "component": "home.city-dropdown"
+    }
+  }
+}

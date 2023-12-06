@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_about_strategicalliances",
+  "info": {
+    "displayName": "Strategicalliance",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "strategicalliances": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::strategicalliance.strategicalliance"
+    }
+  }
+}

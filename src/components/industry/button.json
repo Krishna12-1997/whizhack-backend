@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_industry_buttons",
+  "info": {
+    "displayName": "button",
+    "icon": "attachment",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    }
+  }
+}

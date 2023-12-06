@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_solution_solution_headers",
+  "info": {
+    "displayName": "Trace",
+    "icon": "collapse",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "bg_url": {
+      "type": "string"
+    },
+    "logo_url": {
+      "type": "string"
+    },
+    "small_label": {
+      "type": "string"
+    },
+    "big_title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "threat": {
+      "displayName": "Trace_component",
+      "type": "component",
+      "repeatable": false,
+      "component": "solution.trace-component"
+    }
+  }
+}

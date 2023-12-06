@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "solution_cases",
+  "info": {
+    "singularName": "solution-case",
+    "pluralName": "solution-cases",
+    "displayName": "solution_case",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "case_impact": {
+      "displayName": "use_case",
+      "type": "component",
+      "repeatable": true,
+      "component": "solution.use-case"
+    },
+    "bg_url": {
+      "type": "string"
+    }
+  }
+}

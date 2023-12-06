@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_navbar_single_dropdowns",
+  "info": {
+    "displayName": "Single_dropdown",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "single_sections": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::single-section.single-section"
+    },
+    "label": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "kind": "singleType",
+  "collectionName": "homes",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homes",
+    "displayName": "Home",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "logo_url": {
+      "type": "string"
+    },
+    "link": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home.links"
+    },
+    "images": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home.home-header"
+    },
+    "box": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home.box-product"
+    },
+    "productleft": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home.product-left"
+    },
+    "contact": {
+      "displayName": "Partner_contact",
+      "type": "component",
+      "repeatable": false,
+      "component": "home.partner-contact"
+    },
+    "service_compo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home.product-left"
+    },
+    "Institution_contact": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home.partner-contact"
+    },
+    "career": {
+      "displayName": "Career_pathway",
+      "type": "component",
+      "repeatable": false,
+      "component": "home.career-pathway"
+    },
+    "bg_url": {
+      "type": "string"
+    }
+  }
+}

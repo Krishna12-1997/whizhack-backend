@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_footer_left_footer_links",
+  "info": {
+    "displayName": "left_footer_link",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "menu": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    }
+  }
+}

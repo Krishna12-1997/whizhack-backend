@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_industry_industry_right_tabs",
+  "info": {
+    "displayName": "industry_right_tab",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "industry_rights": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::industry-right.industry-right"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "trainings",
+  "info": {
+    "singularName": "training",
+    "pluralName": "trainings",
+    "displayName": "Training",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "training": {
+      "type": "dynamiczone",
+      "components": [
+        "training.training-program",
+        "training.btog"
+      ]
+    }
+  }
+}

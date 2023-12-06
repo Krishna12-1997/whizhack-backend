@@ -1,0 +1,46 @@
+{
+  "collectionName": "components_solution_trace_components",
+  "info": {
+    "displayName": "Trace_component",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "big_title": {
+      "type": "string"
+    },
+    "small_title": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "bg_url": {
+      "type": "string"
+    },
+    "card": {
+      "type": "component",
+      "repeatable": true,
+      "component": "solution.solution-card"
+    },
+    "traces": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::trace.trace"
+    },
+    "trace_benefits": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::trace-benefit.trace-benefit"
+    },
+    "solution_cases": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::solution-case.solution-case"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

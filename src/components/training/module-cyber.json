@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_training_module_cybers",
+  "info": {
+    "displayName": "module_cyber",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "icon_url": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}

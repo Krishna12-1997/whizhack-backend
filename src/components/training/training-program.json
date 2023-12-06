@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_training_training_programs",
+  "info": {
+    "displayName": "training_list",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "right_bg_url": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "small_title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "cyber_gurus": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::cyber-guru.cyber-guru"
+    },
+    "about_cybers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::about-cyber.about-cyber"
+    },
+    "cyber_modules": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::cyber-module.cyber-module"
+    }
+  }
+}

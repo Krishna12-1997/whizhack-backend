@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_about_stories",
+  "info": {
+    "displayName": "story",
+    "icon": "cloud",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "play_btn_url": {
+      "type": "string"
+    }
+  }
+}

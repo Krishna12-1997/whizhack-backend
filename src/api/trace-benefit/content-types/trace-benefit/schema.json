@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "trace_benefits",
+  "info": {
+    "singularName": "trace-benefit",
+    "pluralName": "trace-benefits",
+    "displayName": "Trace_benefit",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "bg_url": {
+      "type": "string"
+    },
+    "trace_benefit": {
+      "type": "component",
+      "repeatable": true,
+      "component": "solution.trace-features"
+    },
+    "benefit_card": {
+      "type": "component",
+      "repeatable": true,
+      "component": "solution.solution-card"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "kind": "singleType",
+  "collectionName": "industries",
+  "info": {
+    "singularName": "industry",
+    "pluralName": "industries",
+    "displayName": "Industry",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "bg_url": {
+      "type": "string"
+    },
+    "section": {
+      "displayName": "section_intro",
+      "type": "component",
+      "repeatable": false,
+      "component": "industry.section-intro"
+    },
+    "industry_left": {
+      "displayName": "industry_left_tab",
+      "type": "component",
+      "repeatable": false,
+      "component": "industry.industry-left-tab"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "industry_right": {
+      "displayName": "industry_right_tab",
+      "type": "component",
+      "repeatable": false,
+      "component": "industry.industry-right-tab"
+    }
+  }
+}

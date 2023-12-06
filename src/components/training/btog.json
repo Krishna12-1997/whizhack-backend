@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_training_btogs",
+  "info": {
+    "displayName": "Btog",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "right_bg_url": {
+      "type": "string"
+    },
+    "image_left_url": {
+      "type": "string"
+    },
+    "small_title": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "btogs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::btog.btog"
+    },
+    "about_cybers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::about-cyber.about-cyber"
+    },
+    "solution_cases": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::solution-case.solution-case"
+    }
+  }
+}

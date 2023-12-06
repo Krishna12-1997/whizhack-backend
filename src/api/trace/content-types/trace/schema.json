@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "traces",
+  "info": {
+    "singularName": "trace",
+    "pluralName": "traces",
+    "displayName": "Trace_feature",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "bg_url": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "feature_trace": {
+      "displayName": "trace_Features",
+      "type": "component",
+      "repeatable": true,
+      "component": "solution.trace-features"
+    }
+  }
+}

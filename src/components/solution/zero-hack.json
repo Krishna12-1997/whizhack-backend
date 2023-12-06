@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_solution_zero_hacks",
+  "info": {
+    "displayName": "ZeroHack",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "bg_url": {
+      "type": "string"
+    },
+    "logo_url": {
+      "type": "string"
+    },
+    "small_title": {
+      "type": "string"
+    },
+    "big_title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "bg_image_url": {
+      "displayName": "zerohack_component",
+      "type": "component",
+      "repeatable": false,
+      "component": "solution.zerohack-component"
+    }
+  }
+}

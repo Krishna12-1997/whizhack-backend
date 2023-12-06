@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_training_about_link_cybers",
+  "info": {
+    "displayName": "about_link_cyber",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    }
+  }
+}

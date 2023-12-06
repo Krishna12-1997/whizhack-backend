@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_home_service_homes",
+  "info": {
+    "displayName": "service_home",
+    "icon": "brush",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "head": {
+      "type": "string"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "para": {
+      "type": "text"
+    }
+  }
+}

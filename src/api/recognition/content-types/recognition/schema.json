@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "recognitions",
+  "info": {
+    "singularName": "recognition",
+    "pluralName": "recognitions",
+    "displayName": "Recognition"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "button": {
+      "displayName": "button",
+      "type": "component",
+      "repeatable": false,
+      "component": "about.button"
+    }
+  }
+}

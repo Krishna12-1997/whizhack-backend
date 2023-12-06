@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_blog_latest_blogs",
+  "info": {
+    "displayName": "latest_blog",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "latest_blogs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::latest-blog.latest-blog"
+    },
+    "right_title": {
+      "type": "string"
+    }
+  }
+}

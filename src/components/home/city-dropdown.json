@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_home_city_dropdowns",
+  "info": {
+    "displayName": "City_dropdown",
+    "icon": "layer"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    }
+  }
+}

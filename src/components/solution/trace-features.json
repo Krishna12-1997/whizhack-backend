@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_solution_trace_features",
+  "info": {
+    "displayName": "trace_Features",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "icon_url": {
+      "type": "string"
+    }
+  }
+}

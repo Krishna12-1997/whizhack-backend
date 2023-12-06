@@ -1,0 +1,46 @@
+{
+  "kind": "singleType",
+  "collectionName": "services",
+  "info": {
+    "singularName": "service",
+    "pluralName": "services",
+    "displayName": "Service",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "text"
+    },
+    "section": {
+      "displayName": "intro",
+      "type": "component",
+      "repeatable": false,
+      "component": "services.intro"
+    },
+    "timeline": {
+      "displayName": "timeline",
+      "type": "component",
+      "repeatable": false,
+      "component": "services.timeline"
+    },
+    "security_zone": {
+      "type": "dynamiczone",
+      "components": [
+        "services.iot-security"
+      ]
+    },
+    "testing": {
+      "displayName": "p_testing",
+      "type": "component",
+      "repeatable": true,
+      "component": "services.p-testing"
+    }
+  }
+}

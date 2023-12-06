@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_blog_all_blogs",
+  "info": {
+    "displayName": "All_blog",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "all_blog": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blog.latest-blog"
+    }
+  }
+}

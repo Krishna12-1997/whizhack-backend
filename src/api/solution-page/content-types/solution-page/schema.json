@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "solution_pages",
+  "info": {
+    "singularName": "solution-page",
+    "pluralName": "solution-pages",
+    "displayName": "Solution_page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "solution_page": {
+      "displayName": "solution_header",
+      "type": "component",
+      "repeatable": false,
+      "component": "solution.solution-header"
+    }
+  }
+}
