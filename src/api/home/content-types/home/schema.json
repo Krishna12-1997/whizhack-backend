@@ -62,6 +62,12 @@
     },
     "bg_url": {
       "type": "string"
+    },
+    "whizrangeproduct": {
+      "displayName": "whizrange-section",
+      "type": "component",
+      "repeatable": true,
+      "component": "home.whizrange-section"
     }
   }
 }

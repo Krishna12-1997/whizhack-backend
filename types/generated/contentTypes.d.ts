@@ -987,6 +987,7 @@ export interface ApiHomeHome extends Schema.SingleType {
     Institution_contact: Attribute.Component<'home.partner-contact'>;
     career: Attribute.Component<'home.career-pathway'>;
     bg_url: Attribute.String;
+    whizrangeproduct: Attribute.Component<'home.whizrange-section', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

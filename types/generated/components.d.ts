@@ -177,6 +177,7 @@ export interface HomeBoxProduct extends Schema.Component {
     image_url: Attribute.String;
     description: Attribute.Text;
     button: Attribute.Component<'home.button'>;
+    text_logo: Attribute.String;
   };
 }
 
@@ -312,6 +313,20 @@ export interface HomeServiceHome extends Schema.Component {
     head: Attribute.String;
     image_url: Attribute.String;
     para: Attribute.Text;
+  };
+}
+
+export interface HomeWhizrangeSection extends Schema.Component {
+  collectionName: 'components_home_whizrange_sections';
+  info: {
+    displayName: 'whizrange-section';
+    icon: 'bulletList';
+    description: '';
+  };
+  attributes: {
+    logo_url: Attribute.String;
+    description: Attribute.Text;
+    button: Attribute.Component<'home.button'>;
   };
 }
 
@@ -766,6 +781,7 @@ declare module '@strapi/strapi' {
       'home.partner-contact': HomePartnerContact;
       'home.product-left': HomeProductLeft;
       'home.service-home': HomeServiceHome;
+      'home.whizrange-section': HomeWhizrangeSection;
       'industry.button': IndustryButton;
       'industry.industry-left-tab': IndustryIndustryLeftTab;
       'industry.industry-right-tab': IndustryIndustryRightTab;
