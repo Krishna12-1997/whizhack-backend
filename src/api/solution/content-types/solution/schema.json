@@ -16,7 +16,8 @@
       "type": "dynamiczone",
       "components": [
         "solution.solution-header",
-        "solution.zero-hack"
+        "solution.zero-hack",
+        "solution.hids"
       ]
     }
   }

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_solution_hids",
+  "info": {
+    "displayName": "HIDS",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "bg_url": {
+      "type": "string"
+    },
+    "small_title": {
+      "type": "string"
+    },
+    "big_title": {
+      "type": "string"
+    },
+    "hids_section": {
+      "displayName": "Hids_2",
+      "type": "component",
+      "repeatable": false,
+      "component": "solution.hids-2"
+    }
+  }
+}

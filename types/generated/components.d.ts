@@ -512,6 +512,58 @@ export interface ServicesTimeline extends Schema.Component {
   };
 }
 
+export interface SolutionHids2 extends Schema.Component {
+  collectionName: 'components_solution_hids_2s';
+  info: {
+    displayName: 'Hids_2';
+    icon: 'bulletList';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    bg_image_url: Attribute.String;
+    button: Attribute.Component<'home.button'>;
+    about_cybers: Attribute.Relation<
+      'solution.hids-2',
+      'oneToMany',
+      'api::about-cyber.about-cyber'
+    >;
+    hids_features: Attribute.Relation<
+      'solution.hids-2',
+      'oneToMany',
+      'api::hids-feature.hids-feature'
+    >;
+  };
+}
+
+export interface SolutionHidsFeauter extends Schema.Component {
+  collectionName: 'components_solution_hids_feauters';
+  info: {
+    displayName: 'hids_feauter';
+    icon: 'bulletList';
+  };
+  attributes: {
+    title: Attribute.String;
+    image_url: Attribute.String;
+    description: Attribute.RichText;
+  };
+}
+
+export interface SolutionHids extends Schema.Component {
+  collectionName: 'components_solution_hids';
+  info: {
+    displayName: 'HIDS';
+    icon: 'bulletList';
+  };
+  attributes: {
+    bg_url: Attribute.String;
+    small_title: Attribute.String;
+    big_title: Attribute.String;
+    hids_section: Attribute.Component<'solution.hids-2'>;
+  };
+}
+
 export interface SolutionSolutionCard extends Schema.Component {
   collectionName: 'components_solution_solution_cards';
   info: {
@@ -794,6 +846,9 @@ declare module '@strapi/strapi' {
       'services.iot-security': ServicesIotSecurity;
       'services.p-testing': ServicesPTesting;
       'services.timeline': ServicesTimeline;
+      'solution.hids-2': SolutionHids2;
+      'solution.hids-feauter': SolutionHidsFeauter;
+      'solution.hids': SolutionHids;
       'solution.solution-card': SolutionSolutionCard;
       'solution.solution-header': SolutionSolutionHeader;
       'solution.solution-page': SolutionSolutionPage;

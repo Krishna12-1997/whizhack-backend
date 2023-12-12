@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_solution_hids_feauters",
+  "info": {
+    "displayName": "hids_feauter",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

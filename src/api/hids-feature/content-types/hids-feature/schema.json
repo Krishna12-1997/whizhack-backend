@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "hids_features",
+  "info": {
+    "singularName": "hids-feature",
+    "pluralName": "hids-features",
+    "displayName": "Hids_feature",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "feature_hids": {
+      "displayName": "hids_feauter",
+      "type": "component",
+      "repeatable": true,
+      "component": "solution.hids-feauter"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "collectionName": "components_solution_hids_2s",
+  "info": {
+    "displayName": "Hids_2",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "bg_image_url": {
+      "type": "string"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home.button"
+    },
+    "about_cybers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::about-cyber.about-cyber"
+    },
+    "hids_features": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::hids-feature.hids-feature"
+    }
+  }
+}

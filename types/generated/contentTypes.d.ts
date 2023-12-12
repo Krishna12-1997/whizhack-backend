@@ -964,6 +964,38 @@ export interface ApiFooterFooter extends Schema.SingleType {
   };
 }
 
+export interface ApiHidsFeatureHidsFeature extends Schema.CollectionType {
+  collectionName: 'hids_features';
+  info: {
+    singularName: 'hids-feature';
+    pluralName: 'hids-features';
+    displayName: 'Hids_feature';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    feature_hids: Attribute.Component<'solution.hids-feauter', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::hids-feature.hids-feature',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::hids-feature.hids-feature',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiHomeHome extends Schema.SingleType {
   collectionName: 'homes';
   info: {
@@ -1419,7 +1451,7 @@ export interface ApiSolutionSolution extends Schema.SingleType {
   };
   attributes: {
     solution: Attribute.DynamicZone<
-      ['solution.solution-header', 'solution.zero-hack']
+      ['solution.solution-header', 'solution.zero-hack', 'solution.hids']
     >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -1759,6 +1791,7 @@ declare module '@strapi/strapi' {
       'api::cyber-guru.cyber-guru': ApiCyberGuruCyberGuru;
       'api::cyber-module.cyber-module': ApiCyberModuleCyberModule;
       'api::footer.footer': ApiFooterFooter;
+      'api::hids-feature.hids-feature': ApiHidsFeatureHidsFeature;
       'api::home.home': ApiHomeHome;
       'api::home-product.home-product': ApiHomeProductHomeProduct;
       'api::industry.industry': ApiIndustryIndustry;
