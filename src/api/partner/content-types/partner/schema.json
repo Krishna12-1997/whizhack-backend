@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "partners",
+  "info": {
+    "singularName": "partner",
+    "pluralName": "partners",
+    "displayName": "Partner",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "bg_url": {
+      "type": "string"
+    },
+    "partner_contents": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::partner-content.partner-content"
+    }
+  }
+}

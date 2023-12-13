@@ -436,6 +436,19 @@ export interface NavbarSingleDropdown extends Schema.Component {
   };
 }
 
+export interface PartnerPartnerContent extends Schema.Component {
+  collectionName: 'components_partner_partner_contents';
+  info: {
+    displayName: 'partner_content';
+    icon: 'bulletList';
+  };
+  attributes: {
+    logo_url: Attribute.String;
+    title: Attribute.String;
+    description: Attribute.RichText;
+  };
+}
+
 export interface ServicesIntro extends Schema.Component {
   collectionName: 'components_services_intros';
   info: {
@@ -841,6 +854,7 @@ declare module '@strapi/strapi' {
       'navbar.dropdown': NavbarDropdown;
       'navbar.menu': NavbarMenu;
       'navbar.single-dropdown': NavbarSingleDropdown;
+      'partner.partner-content': PartnerPartnerContent;
       'services.intro': ServicesIntro;
       'services.iot-assessment': ServicesIotAssessment;
       'services.iot-security': ServicesIotSecurity;

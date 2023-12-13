@@ -1239,6 +1239,107 @@ export interface ApiLatestBlogLatestBlog extends Schema.CollectionType {
   };
 }
 
+export interface ApiPartnerPartner extends Schema.SingleType {
+  collectionName: 'partners';
+  info: {
+    singularName: 'partner';
+    pluralName: 'partners';
+    displayName: 'Partner';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    bg_url: Attribute.String;
+    partner_contents: Attribute.Relation<
+      'api::partner.partner',
+      'oneToMany',
+      'api::partner-content.partner-content'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::partner.partner',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::partner.partner',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiPartnerContentPartnerContent extends Schema.CollectionType {
+  collectionName: 'partner_contents';
+  info: {
+    singularName: 'partner-content';
+    pluralName: 'partner-contents';
+    displayName: 'Partner_content';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    partner_card: Attribute.Component<'partner.partner-content', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::partner-content.partner-content',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::partner-content.partner-content',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiPrivacyPolicyPrivacyPolicy extends Schema.SingleType {
+  collectionName: 'privacy_policies';
+  info: {
+    singularName: 'privacy-policy';
+    pluralName: 'privacy-policies';
+    displayName: 'Privacy_policy';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    bg_url: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::privacy-policy.privacy-policy',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::privacy-policy.privacy-policy',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiProductContactProductContact extends Schema.CollectionType {
   collectionName: 'product_contacts';
   info: {
@@ -1603,6 +1704,38 @@ export interface ApiStrategicallianceStrategicalliance
   };
 }
 
+export interface ApiTermsConditionTermsCondition extends Schema.SingleType {
+  collectionName: 'terms_conditions';
+  info: {
+    singularName: 'terms-condition';
+    pluralName: 'terms-conditions';
+    displayName: 'Terms_condition';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    bg_url: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::terms-condition.terms-condition',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::terms-condition.terms-condition',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiTimelineTimeline extends Schema.CollectionType {
   collectionName: 'timelines';
   info: {
@@ -1799,6 +1932,9 @@ declare module '@strapi/strapi' {
       'api::industry-right.industry-right': ApiIndustryRightIndustryRight;
       'api::institution-contact.institution-contact': ApiInstitutionContactInstitutionContact;
       'api::latest-blog.latest-blog': ApiLatestBlogLatestBlog;
+      'api::partner.partner': ApiPartnerPartner;
+      'api::partner-content.partner-content': ApiPartnerContentPartnerContent;
+      'api::privacy-policy.privacy-policy': ApiPrivacyPolicyPrivacyPolicy;
       'api::product-contact.product-contact': ApiProductContactProductContact;
       'api::recognition.recognition': ApiRecognitionRecognition;
       'api::section.section': ApiSectionSection;
@@ -1810,6 +1946,7 @@ declare module '@strapi/strapi' {
       'api::solution-contact.solution-contact': ApiSolutionContactSolutionContact;
       'api::solution-page.solution-page': ApiSolutionPageSolutionPage;
       'api::strategicalliance.strategicalliance': ApiStrategicallianceStrategicalliance;
+      'api::terms-condition.terms-condition': ApiTermsConditionTermsCondition;
       'api::timeline.timeline': ApiTimelineTimeline;
       'api::top-right-menu.top-right-menu': ApiTopRightMenuTopRightMenu;
       'api::trace.trace': ApiTraceTrace;

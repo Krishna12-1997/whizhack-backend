@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_partner_partner_contents",
+  "info": {
+    "displayName": "partner_content",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "logo_url": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}
