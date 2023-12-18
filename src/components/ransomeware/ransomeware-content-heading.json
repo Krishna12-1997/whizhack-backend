@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_ransomeware_ransomeware_content_headings",
+  "info": {
+    "displayName": "ransomeware_content_heading",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

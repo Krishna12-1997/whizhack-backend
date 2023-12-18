@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_ransomeware_ransomeware_intro_inners",
+  "info": {
+    "displayName": "ransomeware_intro_inner",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

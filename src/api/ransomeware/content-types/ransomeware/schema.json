@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "ransomewares",
+  "info": {
+    "singularName": "ransomeware",
+    "pluralName": "ransomewares",
+    "displayName": "Ransomeware",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "right_bg_url": {
+      "type": "string"
+    },
+    "ransomeware_content": {
+      "displayName": "ransomeware_intro",
+      "type": "component",
+      "repeatable": false,
+      "component": "ransomeware.ransomeware-intro"
+    }
+  }
+}

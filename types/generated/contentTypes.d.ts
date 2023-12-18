@@ -1375,6 +1375,76 @@ export interface ApiProductContactProductContact extends Schema.CollectionType {
   };
 }
 
+export interface ApiRansomewareRansomeware extends Schema.SingleType {
+  collectionName: 'ransomewares';
+  info: {
+    singularName: 'ransomeware';
+    pluralName: 'ransomewares';
+    displayName: 'Ransomeware';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    right_bg_url: Attribute.String;
+    ransomeware_content: Attribute.Component<'ransomeware.ransomeware-intro'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::ransomeware.ransomeware',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::ransomeware.ransomeware',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiRansomewareProposalRansomewareProposal
+  extends Schema.CollectionType {
+  collectionName: 'ransomeware_proposals';
+  info: {
+    singularName: 'ransomeware-proposal';
+    pluralName: 'ransomeware-proposals';
+    displayName: 'Ransomeware_proposal';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.RichText;
+    heading_content: Attribute.Component<
+      'ransomeware.ransomeware-heading-content',
+      true
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::ransomeware-proposal.ransomeware-proposal',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::ransomeware-proposal.ransomeware-proposal',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiRecognitionRecognition extends Schema.CollectionType {
   collectionName: 'recognitions';
   info: {
@@ -1936,6 +2006,8 @@ declare module '@strapi/strapi' {
       'api::partner-content.partner-content': ApiPartnerContentPartnerContent;
       'api::privacy-policy.privacy-policy': ApiPrivacyPolicyPrivacyPolicy;
       'api::product-contact.product-contact': ApiProductContactProductContact;
+      'api::ransomeware.ransomeware': ApiRansomewareRansomeware;
+      'api::ransomeware-proposal.ransomeware-proposal': ApiRansomewareProposalRansomewareProposal;
       'api::recognition.recognition': ApiRecognitionRecognition;
       'api::section.section': ApiSectionSection;
       'api::service.service': ApiServiceService;

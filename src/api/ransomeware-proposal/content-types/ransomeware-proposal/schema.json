@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ransomeware_proposals",
+  "info": {
+    "singularName": "ransomeware-proposal",
+    "pluralName": "ransomeware-proposals",
+    "displayName": "Ransomeware_proposal"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "heading_content": {
+      "displayName": "ransomeware_heading_content",
+      "type": "component",
+      "repeatable": true,
+      "component": "ransomeware.ransomeware-heading-content"
+    }
+  }
+}

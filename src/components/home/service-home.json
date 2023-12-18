@@ -15,6 +15,9 @@
     },
     "para": {
       "type": "text"
+    },
+    "redirect_url": {
+      "type": "string"
     }
   }
 }

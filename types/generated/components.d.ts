@@ -46,6 +46,7 @@ export interface AboutManagement extends Schema.Component {
     icon: Attribute.String;
     image_url: Attribute.String;
     title: Attribute.String;
+    linkedin_url: Attribute.String;
   };
 }
 
@@ -313,6 +314,7 @@ export interface HomeServiceHome extends Schema.Component {
     head: Attribute.String;
     image_url: Attribute.String;
     para: Attribute.Text;
+    redirect_url: Attribute.String;
   };
 }
 
@@ -446,6 +448,72 @@ export interface PartnerPartnerContent extends Schema.Component {
     logo_url: Attribute.String;
     title: Attribute.String;
     description: Attribute.RichText;
+  };
+}
+
+export interface RansomewareInnerContent extends Schema.Component {
+  collectionName: 'components_ransomeware_inner_contents';
+  info: {
+    displayName: 'inner_content';
+    icon: 'bulletList';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.RichText;
+  };
+}
+
+export interface RansomewareRansomewareContentHeading extends Schema.Component {
+  collectionName: 'components_ransomeware_ransomeware_content_headings';
+  info: {
+    displayName: 'ransomeware_content_heading';
+    icon: 'bulletList';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.RichText;
+  };
+}
+
+export interface RansomewareRansomewareHeadingContent extends Schema.Component {
+  collectionName: 'components_ransomeware_ransomeware_heading_contents';
+  info: {
+    displayName: 'ransomeware_heading_content';
+    icon: 'bulletList';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
+export interface RansomewareRansomewareIntroInner extends Schema.Component {
+  collectionName: 'components_ransomeware_ransomeware_intro_inners';
+  info: {
+    displayName: 'ransomeware_intro_inner';
+    icon: 'bulletList';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.RichText;
+  };
+}
+
+export interface RansomewareRansomewareIntro extends Schema.Component {
+  collectionName: 'components_ransomeware_ransomeware_intros';
+  info: {
+    displayName: 'ransomeware_intro';
+    icon: 'bulletList';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.RichText;
+    ransomeware_content_inner: Attribute.Component<
+      'ransomeware.ransomeware-intro-inner',
+      true
+    >;
   };
 }
 
@@ -855,6 +923,11 @@ declare module '@strapi/strapi' {
       'navbar.menu': NavbarMenu;
       'navbar.single-dropdown': NavbarSingleDropdown;
       'partner.partner-content': PartnerPartnerContent;
+      'ransomeware.inner-content': RansomewareInnerContent;
+      'ransomeware.ransomeware-content-heading': RansomewareRansomewareContentHeading;
+      'ransomeware.ransomeware-heading-content': RansomewareRansomewareHeadingContent;
+      'ransomeware.ransomeware-intro-inner': RansomewareRansomewareIntroInner;
+      'ransomeware.ransomeware-intro': RansomewareRansomewareIntro;
       'services.intro': ServicesIntro;
       'services.iot-assessment': ServicesIotAssessment;
       'services.iot-security': ServicesIotSecurity;
