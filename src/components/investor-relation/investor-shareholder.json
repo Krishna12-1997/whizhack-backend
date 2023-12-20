@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_investor_relation_investor_shareholders",
+  "info": {
+    "displayName": "investor_shareholder",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "small_title": {
+      "type": "text"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

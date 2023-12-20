@@ -311,10 +311,24 @@ export interface HomeServiceHome extends Schema.Component {
     description: '';
   };
   attributes: {
-    head: Attribute.String;
     image_url: Attribute.String;
-    para: Attribute.Text;
     redirect_url: Attribute.String;
+    service_homes: Attribute.Relation<
+      'home.service-home',
+      'oneToMany',
+      'api::service-home.service-home'
+    >;
+  };
+}
+
+export interface HomeServiceItOt extends Schema.Component {
+  collectionName: 'components_home_service_it_ots';
+  info: {
+    displayName: 'service_it_ot';
+    icon: 'bulletList';
+  };
+  attributes: {
+    title: Attribute.String;
   };
 }
 
@@ -387,6 +401,63 @@ export interface IndustrySectionIntro extends Schema.Component {
     title: Attribute.String;
     content: Attribute.RichText;
     play_btn_url: Attribute.String;
+  };
+}
+
+export interface InvestorRelationComponentYear extends Schema.Component {
+  collectionName: 'components_investor_relation_component_years';
+  info: {
+    displayName: 'component_year';
+    icon: 'bulletList';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    content: Attribute.RichText;
+  };
+}
+
+export interface InvestorRelationFinancialYearPerformance
+  extends Schema.Component {
+  collectionName: 'components_investor_relation_financial_year_performances';
+  info: {
+    displayName: 'Financial_year_performance';
+    icon: 'bulletList';
+  };
+  attributes: {
+    title: Attribute.String;
+  };
+}
+
+export interface InvestorRelationFinancialYear extends Schema.Component {
+  collectionName: 'components_investor_relation_financial_years';
+  info: {
+    displayName: 'Financial_Year';
+    icon: 'bulletList';
+    description: '';
+  };
+  attributes: {
+    title: Attribute.String;
+    investors: Attribute.Relation<
+      'investor-relation.financial-year',
+      'oneToMany',
+      'api::investor.investor'
+    >;
+  };
+}
+
+export interface InvestorRelationInvestorShareholder extends Schema.Component {
+  collectionName: 'components_investor_relation_investor_shareholders';
+  info: {
+    displayName: 'investor_shareholder';
+    icon: 'bulletList';
+  };
+  attributes: {
+    title: Attribute.String;
+    small_title: Attribute.Text;
+    image_url: Attribute.String;
+    description: Attribute.RichText;
   };
 }
 
@@ -914,11 +985,16 @@ declare module '@strapi/strapi' {
       'home.partner-contact': HomePartnerContact;
       'home.product-left': HomeProductLeft;
       'home.service-home': HomeServiceHome;
+      'home.service-it-ot': HomeServiceItOt;
       'home.whizrange-section': HomeWhizrangeSection;
       'industry.button': IndustryButton;
       'industry.industry-left-tab': IndustryIndustryLeftTab;
       'industry.industry-right-tab': IndustryIndustryRightTab;
       'industry.section-intro': IndustrySectionIntro;
+      'investor-relation.component-year': InvestorRelationComponentYear;
+      'investor-relation.financial-year-performance': InvestorRelationFinancialYearPerformance;
+      'investor-relation.financial-year': InvestorRelationFinancialYear;
+      'investor-relation.investor-shareholder': InvestorRelationInvestorShareholder;
       'navbar.dropdown': NavbarDropdown;
       'navbar.menu': NavbarMenu;
       'navbar.single-dropdown': NavbarSingleDropdown;

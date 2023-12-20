@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "service_its",
+  "info": {
+    "singularName": "service-it",
+    "pluralName": "service-its",
+    "displayName": "Service_IT",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "bg_url": {
+      "type": "string"
+    },
+    "service_IT_content": {
+      "type": "component",
+      "repeatable": true,
+      "component": "investor-relation.component-year"
+    }
+  }
+}

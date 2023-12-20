@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "service_ots",
+  "info": {
+    "singularName": "service-ot",
+    "pluralName": "service-ots",
+    "displayName": "Service_OT"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "bg_url": {
+      "type": "string"
+    },
+    "service_ot_content": {
+      "type": "component",
+      "repeatable": true,
+      "component": "investor-relation.component-year"
+    }
+  }
+}

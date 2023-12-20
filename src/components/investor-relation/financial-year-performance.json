@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_investor_relation_financial_year_performances",
+  "info": {
+    "displayName": "Financial_year_performance",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}

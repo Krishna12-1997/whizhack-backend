@@ -1,0 +1,37 @@
+{
+  "kind": "singleType",
+  "collectionName": "investor_relations",
+  "info": {
+    "singularName": "investor-relation",
+    "pluralName": "investor-relations",
+    "displayName": "Investor_relation",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "year": {
+      "displayName": "Financial_Year",
+      "type": "component",
+      "repeatable": false,
+      "component": "investor-relation.financial-year"
+    },
+    "bg_url": {
+      "type": "string"
+    },
+    "financial_performance": {
+      "displayName": "Financial_year_performance",
+      "type": "component",
+      "repeatable": true,
+      "component": "investor-relation.financial-year-performance"
+    }
+  }
+}

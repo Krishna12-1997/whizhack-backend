@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_investor_relation_financial_years",
+  "info": {
+    "displayName": "Financial_Year",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "investors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::investor.investor"
+    }
+  }
+}

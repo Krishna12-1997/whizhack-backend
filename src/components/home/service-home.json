@@ -7,17 +7,16 @@
   },
   "options": {},
   "attributes": {
-    "head": {
-      "type": "string"
-    },
     "image_url": {
       "type": "string"
     },
-    "para": {
-      "type": "text"
-    },
     "redirect_url": {
       "type": "string"
+    },
+    "service_homes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service-home.service-home"
     }
   }
 }

@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "service_homes",
+  "info": {
+    "singularName": "service-home",
+    "pluralName": "service-homes",
+    "displayName": "service_home"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "service_content": {
+      "displayName": "service_it_ot",
+      "type": "component",
+      "repeatable": true,
+      "component": "home.service-it-ot"
+    }
+  }
+}

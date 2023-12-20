@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_investor_relation_component_years",
+  "info": {
+    "displayName": "component_year",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "content": {
+      "type": "richtext"
+    }
+  }
+}

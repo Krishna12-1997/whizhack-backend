@@ -1202,6 +1202,79 @@ export interface ApiInstitutionContactInstitutionContact
   };
 }
 
+export interface ApiInvestorInvestor extends Schema.CollectionType {
+  collectionName: 'investors';
+  info: {
+    singularName: 'investor';
+    pluralName: 'investors';
+    displayName: 'investor';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    investor_shareholder_content: Attribute.Component<
+      'investor-relation.investor-shareholder',
+      true
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::investor.investor',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::investor.investor',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiInvestorRelationInvestorRelation extends Schema.SingleType {
+  collectionName: 'investor_relations';
+  info: {
+    singularName: 'investor-relation';
+    pluralName: 'investor-relations';
+    displayName: 'Investor_relation';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    year: Attribute.Component<'investor-relation.financial-year'>;
+    bg_url: Attribute.String;
+    financial_performance: Attribute.Component<
+      'investor-relation.financial-year-performance',
+      true
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::investor-relation.investor-relation',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::investor-relation.investor-relation',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiLatestBlogLatestBlog extends Schema.CollectionType {
   collectionName: 'latest_blogs';
   info: {
@@ -1545,6 +1618,74 @@ export interface ApiServiceService extends Schema.SingleType {
   };
 }
 
+export interface ApiServiceHomeServiceHome extends Schema.CollectionType {
+  collectionName: 'service_homes';
+  info: {
+    singularName: 'service-home';
+    pluralName: 'service-homes';
+    displayName: 'service_home';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    service_content: Attribute.Component<'home.service-it-ot', true>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::service-home.service-home',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::service-home.service-home',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiServiceItServiceIt extends Schema.SingleType {
+  collectionName: 'service_its';
+  info: {
+    singularName: 'service-it';
+    pluralName: 'service-its';
+    displayName: 'Service_IT';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    bg_url: Attribute.String;
+    service_IT_content: Attribute.Component<
+      'investor-relation.component-year',
+      true
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::service-it.service-it',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::service-it.service-it',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiServiceLinkServiceLink extends Schema.CollectionType {
   collectionName: 'service_links';
   info: {
@@ -1569,6 +1710,42 @@ export interface ApiServiceLinkServiceLink extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::service-link.service-link',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiServiceOtServiceOt extends Schema.SingleType {
+  collectionName: 'service_ots';
+  info: {
+    singularName: 'service-ot';
+    pluralName: 'service-ots';
+    displayName: 'Service_OT';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    bg_url: Attribute.String;
+    service_ot_content: Attribute.Component<
+      'investor-relation.component-year',
+      true
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::service-ot.service-ot',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::service-ot.service-ot',
       'oneToOne',
       'admin::user'
     > &
@@ -2001,6 +2178,8 @@ declare module '@strapi/strapi' {
       'api::industry-left.industry-left': ApiIndustryLeftIndustryLeft;
       'api::industry-right.industry-right': ApiIndustryRightIndustryRight;
       'api::institution-contact.institution-contact': ApiInstitutionContactInstitutionContact;
+      'api::investor.investor': ApiInvestorInvestor;
+      'api::investor-relation.investor-relation': ApiInvestorRelationInvestorRelation;
       'api::latest-blog.latest-blog': ApiLatestBlogLatestBlog;
       'api::partner.partner': ApiPartnerPartner;
       'api::partner-content.partner-content': ApiPartnerContentPartnerContent;
@@ -2011,7 +2190,10 @@ declare module '@strapi/strapi' {
       'api::recognition.recognition': ApiRecognitionRecognition;
       'api::section.section': ApiSectionSection;
       'api::service.service': ApiServiceService;
+      'api::service-home.service-home': ApiServiceHomeServiceHome;
+      'api::service-it.service-it': ApiServiceItServiceIt;
       'api::service-link.service-link': ApiServiceLinkServiceLink;
+      'api::service-ot.service-ot': ApiServiceOtServiceOt;
       'api::single-section.single-section': ApiSingleSectionSingleSection;
       'api::solution.solution': ApiSolutionSolution;
       'api::solution-case.solution-case': ApiSolutionCaseSolutionCase;

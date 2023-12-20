@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "investors",
+  "info": {
+    "singularName": "investor",
+    "pluralName": "investors",
+    "displayName": "investor"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "investor_shareholder_content": {
+      "displayName": "investor_shareholder",
+      "type": "component",
+      "repeatable": true,
+      "component": "investor-relation.investor-shareholder"
+    }
+  }
+}

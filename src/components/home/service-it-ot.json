@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_home_service_it_ots",
+  "info": {
+    "displayName": "service_it_ot",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}
