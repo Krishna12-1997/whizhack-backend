@@ -208,7 +208,7 @@ export interface HomeCareerPathway extends Schema.Component {
     title: Attribute.String;
     certificate_url: Attribute.String;
     certified_name: Attribute.String;
-    career_right: Attribute.Component<'home.career-right'>;
+    career_right: Attribute.Component<'home.career-right', true>;
   };
 }
 
@@ -217,12 +217,14 @@ export interface HomeCareerRight extends Schema.Component {
   info: {
     displayName: 'career_right';
     icon: 'bulletList';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
-    partner_title: Attribute.String;
-    partner_url: Attribute.String;
+    icon_url: Attribute.String;
     content: Attribute.Text;
+    label: Attribute.String;
+    label_redirect: Attribute.String;
   };
 }
 

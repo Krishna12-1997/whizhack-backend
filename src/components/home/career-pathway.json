@@ -27,7 +27,7 @@
     "career_right": {
       "displayName": "career_right",
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "home.career-right"
     }
   }

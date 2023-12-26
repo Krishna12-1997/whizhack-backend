@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "white_papers",
+  "info": {
+    "singularName": "white-paper",
+    "pluralName": "white-papers",
+    "displayName": "White_paper",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "bg_url": {
+      "type": "string"
+    },
+    "white_paper_cards": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::white-paper-card.white-paper-card"
+    }
+  }
+}

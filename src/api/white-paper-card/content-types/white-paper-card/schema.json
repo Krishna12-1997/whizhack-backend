@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "white_paper_cards",
+  "info": {
+    "singularName": "white-paper-card",
+    "pluralName": "white-paper-cards",
+    "displayName": "White_paper_card",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "pdf": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios",
+        "pdf"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

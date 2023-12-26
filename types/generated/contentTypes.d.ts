@@ -2146,6 +2146,112 @@ export interface ApiTrainingTraining extends Schema.SingleType {
   };
 }
 
+export interface ApiWhitePaperWhitePaper extends Schema.SingleType {
+  collectionName: 'white_papers';
+  info: {
+    singularName: 'white-paper';
+    pluralName: 'white-papers';
+    displayName: 'White_paper';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    bg_url: Attribute.String;
+    white_paper_cards: Attribute.Relation<
+      'api::white-paper.white-paper',
+      'oneToMany',
+      'api::white-paper-card.white-paper-card'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::white-paper.white-paper',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::white-paper.white-paper',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiWhitePaperCardWhitePaperCard extends Schema.CollectionType {
+  collectionName: 'white_paper_cards';
+  info: {
+    singularName: 'white-paper-card';
+    pluralName: 'white-paper-cards';
+    displayName: 'White_paper_card';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    pdf: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::white-paper-card.white-paper-card',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::white-paper-card.white-paper-card',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiWhitePaperDownloadDetailWhitePaperDownloadDetail
+  extends Schema.CollectionType {
+  collectionName: 'white_paper_download_details';
+  info: {
+    singularName: 'white-paper-download-detail';
+    pluralName: 'white-paper-download-details';
+    displayName: 'white_paper_download_detail';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    contact: Attribute.BigInteger;
+    email: Attribute.Email;
+    companyName: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::white-paper-download-detail.white-paper-download-detail',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::white-paper-download-detail.white-paper-download-detail',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Shared {
     export interface ContentTypes {
@@ -2206,6 +2312,9 @@ declare module '@strapi/strapi' {
       'api::trace.trace': ApiTraceTrace;
       'api::trace-benefit.trace-benefit': ApiTraceBenefitTraceBenefit;
       'api::training.training': ApiTrainingTraining;
+      'api::white-paper.white-paper': ApiWhitePaperWhitePaper;
+      'api::white-paper-card.white-paper-card': ApiWhitePaperCardWhitePaperCard;
+      'api::white-paper-download-detail.white-paper-download-detail': ApiWhitePaperDownloadDetailWhitePaperDownloadDetail;
     }
   }
 }
