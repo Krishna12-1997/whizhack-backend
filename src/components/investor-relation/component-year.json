@@ -15,6 +15,9 @@
     },
     "content": {
       "type": "richtext"
+    },
+    "image_url": {
+      "type": "string"
     }
   }
 }

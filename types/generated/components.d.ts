@@ -417,6 +417,7 @@ export interface InvestorRelationComponentYear extends Schema.Component {
     title: Attribute.String;
     description: Attribute.Text;
     content: Attribute.RichText;
+    image_url: Attribute.String;
   };
 }
 
