@@ -1600,6 +1600,7 @@ export interface ApiServiceService extends Schema.SingleType {
     timeline: Attribute.Component<'services.timeline'>;
     security_zone: Attribute.DynamicZone<['services.iot-security']>;
     testing: Attribute.Component<'services.p-testing', true>;
+    Service_security: Attribute.Component<'home.service-home', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

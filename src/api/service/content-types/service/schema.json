@@ -41,6 +41,11 @@
       "type": "component",
       "repeatable": true,
       "component": "services.p-testing"
+    },
+    "Service_security": {
+      "type": "component",
+      "repeatable": true,
+      "component": "home.service-home"
     }
   }
 }
