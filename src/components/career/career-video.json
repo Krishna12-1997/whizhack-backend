@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_career_career_videos",
+  "info": {
+    "displayName": "career_video",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "video_url": {
+      "type": "string"
+    }
+  }
+}

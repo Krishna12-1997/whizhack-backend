@@ -5,10 +5,12 @@ export interface AboutButton extends Schema.Component {
   info: {
     displayName: 'button';
     icon: 'bulletList';
+    description: '';
   };
   attributes: {
     title: Attribute.String;
     icon_url: Attribute.String;
+    url: Attribute.Text;
   };
 }
 
@@ -151,6 +153,40 @@ export interface BlogLatestBlog extends Schema.Component {
       'api::latest-blog.latest-blog'
     >;
     right_title: Attribute.String;
+  };
+}
+
+export interface CareerCareerDuration extends Schema.Component {
+  collectionName: 'components_career_career_durations';
+  info: {
+    displayName: 'career_duration';
+    icon: 'bulletList';
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+  };
+}
+
+export interface CareerCareerModule extends Schema.Component {
+  collectionName: 'components_career_career_modules';
+  info: {
+    displayName: 'career_module';
+    icon: 'bulletList';
+  };
+  attributes: {
+    title: Attribute.String;
+  };
+}
+
+export interface CareerCareerVideo extends Schema.Component {
+  collectionName: 'components_career_career_videos';
+  info: {
+    displayName: 'career_video';
+    icon: 'bulletList';
+  };
+  attributes: {
+    video_url: Attribute.String;
   };
 }
 
@@ -976,6 +1012,9 @@ declare module '@strapi/strapi' {
       'blog.all-blog': BlogAllBlog;
       'blog.blog-detail': BlogBlogDetail;
       'blog.latest-blog': BlogLatestBlog;
+      'career.career-duration': CareerCareerDuration;
+      'career.career-module': CareerCareerModule;
+      'career.career-video': CareerCareerVideo;
       'footer.left-footer-link': FooterLeftFooterLink;
       'home.box-product': HomeBoxProduct;
       'home.button': HomeButton;

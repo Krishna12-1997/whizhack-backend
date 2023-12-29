@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_career_career_modules",
+  "info": {
+    "displayName": "career_module",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}

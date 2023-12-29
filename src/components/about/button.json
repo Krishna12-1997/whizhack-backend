@@ -2,7 +2,8 @@
   "collectionName": "components_about_buttons",
   "info": {
     "displayName": "button",
-    "icon": "bulletList"
+    "icon": "bulletList",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -11,6 +12,9 @@
     },
     "icon_url": {
       "type": "string"
+    },
+    "url": {
+      "type": "text"
     }
   }
 }

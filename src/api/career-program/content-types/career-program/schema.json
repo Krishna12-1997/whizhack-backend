@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "career_programs",
+  "info": {
+    "singularName": "career-program",
+    "pluralName": "career-programs",
+    "displayName": "Career_program",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "small_title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "duration": {
+      "displayName": "career_duration",
+      "type": "component",
+      "repeatable": false,
+      "component": "career.career-duration"
+    },
+    "module": {
+      "type": "component",
+      "repeatable": true,
+      "component": "career.career-module"
+    },
+    "image_url": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_career_career_durations",
+  "info": {
+    "displayName": "career_duration",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

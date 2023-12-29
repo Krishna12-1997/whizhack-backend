@@ -796,6 +796,81 @@ export interface ApiBtogBtog extends Schema.CollectionType {
   };
 }
 
+export interface ApiCareerPathwayCareerPathway extends Schema.SingleType {
+  collectionName: 'career_pathways';
+  info: {
+    singularName: 'career-pathway';
+    pluralName: 'career-pathways';
+    displayName: 'Career_pathway';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    bg_url: Attribute.String;
+    title: Attribute.String;
+    description: Attribute.Text;
+    career_path_video: Attribute.Component<'career.career-video', true>;
+    career_programs: Attribute.Relation<
+      'api::career-pathway.career-pathway',
+      'oneToMany',
+      'api::career-program.career-program'
+    >;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::career-pathway.career-pathway',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::career-pathway.career-pathway',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiCareerProgramCareerProgram extends Schema.CollectionType {
+  collectionName: 'career_programs';
+  info: {
+    singularName: 'career-program';
+    pluralName: 'career-programs';
+    displayName: 'Career_program';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    small_title: Attribute.Text;
+    description: Attribute.Text;
+    duration: Attribute.Component<'career.career-duration'>;
+    module: Attribute.Component<'career.career-module', true>;
+    image_url: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::career-program.career-program',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::career-program.career-program',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiContactDetailContactDetail extends Schema.CollectionType {
   collectionName: 'contact_details';
   info: {
@@ -1524,6 +1599,7 @@ export interface ApiRecognitionRecognition extends Schema.CollectionType {
     singularName: 'recognition';
     pluralName: 'recognitions';
     displayName: 'Recognition';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -2273,6 +2349,8 @@ declare module '@strapi/strapi' {
       'api::about-cyber.about-cyber': ApiAboutCyberAboutCyber;
       'api::blog.blog': ApiBlogBlog;
       'api::btog.btog': ApiBtogBtog;
+      'api::career-pathway.career-pathway': ApiCareerPathwayCareerPathway;
+      'api::career-program.career-program': ApiCareerProgramCareerProgram;
       'api::contact-detail.contact-detail': ApiContactDetailContactDetail;
       'api::contact-form.contact-form': ApiContactFormContactForm;
       'api::cyber-guru.cyber-guru': ApiCyberGuruCyberGuru;
