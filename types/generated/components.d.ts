@@ -304,9 +304,11 @@ export interface HomeLinks extends Schema.Component {
   info: {
     displayName: 'links';
     icon: 'attachment';
+    description: '';
   };
   attributes: {
     label: Attribute.String;
+    redirect_id: Attribute.String;
   };
 }
 
