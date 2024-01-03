@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_investor_relation_partner_advisors",
+  "info": {
+    "displayName": "partner_advisor",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "image_url": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

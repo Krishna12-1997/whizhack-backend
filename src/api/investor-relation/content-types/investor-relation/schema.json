@@ -32,6 +32,12 @@
       "type": "component",
       "repeatable": true,
       "component": "investor-relation.financial-year-performance"
+    },
+    "advisorpartner": {
+      "displayName": "partner_advisor",
+      "type": "component",
+      "repeatable": true,
+      "component": "investor-relation.partner-advisor"
     }
   }
 }

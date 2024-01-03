@@ -502,6 +502,20 @@ export interface InvestorRelationInvestorShareholder extends Schema.Component {
   };
 }
 
+export interface InvestorRelationPartnerAdvisor extends Schema.Component {
+  collectionName: 'components_investor_relation_partner_advisors';
+  info: {
+    displayName: 'partner_advisor';
+    icon: 'bulletList';
+    description: '';
+  };
+  attributes: {
+    image_url: Attribute.String;
+    description: Attribute.RichText;
+    title: Attribute.String;
+  };
+}
+
 export interface NavbarDropdown extends Schema.Component {
   collectionName: 'components_navbar_dropdowns';
   info: {
@@ -1039,6 +1053,7 @@ declare module '@strapi/strapi' {
       'investor-relation.financial-year-performance': InvestorRelationFinancialYearPerformance;
       'investor-relation.financial-year': InvestorRelationFinancialYear;
       'investor-relation.investor-shareholder': InvestorRelationInvestorShareholder;
+      'investor-relation.partner-advisor': InvestorRelationPartnerAdvisor;
       'navbar.dropdown': NavbarDropdown;
       'navbar.menu': NavbarMenu;
       'navbar.single-dropdown': NavbarSingleDropdown;

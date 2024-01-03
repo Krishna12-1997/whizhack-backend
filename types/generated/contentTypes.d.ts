@@ -1332,6 +1332,10 @@ export interface ApiInvestorRelationInvestorRelation extends Schema.SingleType {
       'investor-relation.financial-year-performance',
       true
     >;
+    advisorpartner: Attribute.Component<
+      'investor-relation.partner-advisor',
+      true
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -2275,7 +2279,7 @@ export interface ApiWhitePaperCardWhitePaperCard extends Schema.CollectionType {
   attributes: {
     title: Attribute.String;
     description: Attribute.Text;
-    pdf: Attribute.Media;
+    pdf_url: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

@@ -18,16 +18,8 @@
     "description": {
       "type": "text"
     },
-    "pdf": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios",
-        "pdf"
-      ],
-      "type": "media",
-      "multiple": false
+    "pdf_url": {
+      "type": "string"
     }
   }
 }
