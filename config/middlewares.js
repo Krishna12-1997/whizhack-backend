@@ -19,4 +19,10 @@ module.exports = [
   "strapi::session",
   "strapi::favicon",
   "strapi::public",
+  {
+    name: "global::redirect",
+    config: {
+      enabled: true,
+    },
+  },
 ];
