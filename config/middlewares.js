@@ -9,6 +9,7 @@ module.exports = [
         "http://13.200.174.138:3000",
         "http://15.207.226.239:1337",
         "http://whizhack.com",
+        "http://test.whizhack.com",
       ],
     },
   },
