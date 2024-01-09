@@ -2,9 +2,13 @@ module.exports = [
   "strapi::errors",
   "strapi::security",
   {
-    name: 'strapi::cors',
+    name: "strapi::cors",
     config: {
-      origin: ['http://13.200.174.138:80', 'http://15.207.226.239:1337']
+      origin: [
+        "http://13.200.174.138:80",
+        "http://13.200.174.138:3000",
+        "http://15.207.226.239:1337",
+      ],
     },
   },
   "strapi::poweredBy",
@@ -15,4 +19,3 @@ module.exports = [
   "strapi::favicon",
   "strapi::public",
 ];
-
