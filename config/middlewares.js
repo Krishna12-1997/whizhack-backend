@@ -10,10 +10,13 @@ module.exports = [
         "http://15.207.226.239:1337",
         "https://whizhack.com",
         "http://whizhack.com",
+        "http://www.whizhack.com",
         "http://test.whizhack.com",
       ],
     },
   },
+
+
   "strapi::poweredBy",
   "strapi::logger",
   "strapi::query",
