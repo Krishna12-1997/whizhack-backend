@@ -10,7 +10,7 @@ module.exports = [
         "http://15.207.226.239:1337",
         "https://whizhack.com",
         "http://whizhack.com",
-        "https://whizhack.com",
+        "https://www.whizhack.com",
         "http://www.whizhack.com",
         "https://test.whizhack.com",
         "http://test.whizhack.com",
