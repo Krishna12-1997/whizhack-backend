@@ -17,8 +17,6 @@ module.exports = [
       ],
     },
   },
-
-
   "strapi::poweredBy",
   "strapi::logger",
   "strapi::query",
