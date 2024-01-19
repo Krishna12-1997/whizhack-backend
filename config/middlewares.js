@@ -14,7 +14,6 @@ module.exports = [
         "http://www.whizhack.com",
         "https://test.whizhack.com",
         "http://test.whizhack.com",
-        "https://d2vyuniai6aaiz.cloudfront.net"
       ],
     },
   },
