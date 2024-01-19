@@ -1,31 +1,6 @@
 module.exports = [
   "strapi::errors",
-  {
-    name: 'strapi::security',
-    config: {
-      contentSecurityPolicy: {
-        useDefaults: true,
-        directives: {
-          'connect-src': ["'self'", 'https:'],
-          'img-src': [
-            "'self'",
-            'data:',
-            'blob:',
-            'dl.airtable.com',
-            'whizhack-aws-s3-bucket.s3.ap-south-1.amazonaws.com',
-          ],
-          'media-src': [
-            "'self'",
-            'data:',
-            'blob:',
-            'dl.airtable.com',
-            'whizhack-aws-s3-bucket.s3.ap-south-1.amazonaws.com',
-          ],
-          upgradeInsecureRequests: null,
-        },
-      },
-    },
-  },
+  'strapi::security',
   {
     name: "strapi::cors",
     config: {
@@ -39,6 +14,7 @@ module.exports = [
         "http://www.whizhack.com",
         "https://test.whizhack.com",
         "http://test.whizhack.com",
+        "https://d2vyuniai6aaiz.cloudfront.net"
       ],
     },
   },
