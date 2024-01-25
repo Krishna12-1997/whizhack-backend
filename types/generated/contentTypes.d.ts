@@ -1021,6 +1021,7 @@ export interface ApiFooterFooter extends Schema.SingleType {
     number: Attribute.BigInteger;
     link: Attribute.String;
     left_footer: Attribute.Component<'footer.left-footer-link', true>;
+    copywrite_text: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
