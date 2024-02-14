@@ -4,7 +4,8 @@
   "info": {
     "singularName": "service-link",
     "pluralName": "service-links",
-    "displayName": "service_link"
+    "displayName": "service_link",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true

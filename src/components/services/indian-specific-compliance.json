@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_services_indian_specific_compliances",
+  "info": {
+    "displayName": "indian-specific-compliance"
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    }
+  }
+}

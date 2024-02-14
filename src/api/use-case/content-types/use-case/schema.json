@@ -1,0 +1,30 @@
+{
+  "kind": "singleType",
+  "collectionName": "use_cases",
+  "info": {
+    "singularName": "use-case",
+    "pluralName": "use-cases",
+    "displayName": "Use_case",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "bg_url": {
+      "type": "string"
+    },
+    "use_case_cards": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::use-case-card.use-case-card"
+    }
+  }
+}

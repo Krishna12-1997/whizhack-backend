@@ -643,6 +643,16 @@ export interface RansomewareRansomewareIntro extends Schema.Component {
   };
 }
 
+export interface ServicesIndianSpecificCompliance extends Schema.Component {
+  collectionName: 'components_services_indian_specific_compliances';
+  info: {
+    displayName: 'indian-specific-compliance';
+  };
+  attributes: {
+    label: Attribute.String;
+  };
+}
+
 export interface ServicesIntro extends Schema.Component {
   collectionName: 'components_services_intros';
   info: {
@@ -663,6 +673,7 @@ export interface ServicesIotAssessment extends Schema.Component {
   info: {
     displayName: 'iot_assessment';
     icon: 'bulletList';
+    description: '';
   };
   attributes: {
     label: Attribute.String;
@@ -1063,6 +1074,7 @@ declare module '@strapi/strapi' {
       'ransomeware.ransomeware-heading-content': RansomewareRansomewareHeadingContent;
       'ransomeware.ransomeware-intro-inner': RansomewareRansomewareIntroInner;
       'ransomeware.ransomeware-intro': RansomewareRansomewareIntro;
+      'services.indian-specific-compliance': ServicesIndianSpecificCompliance;
       'services.intro': ServicesIntro;
       'services.iot-assessment': ServicesIotAssessment;
       'services.iot-security': ServicesIotSecurity;
