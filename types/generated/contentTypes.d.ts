@@ -1851,6 +1851,7 @@ export interface ApiSingleSectionSingleSection extends Schema.CollectionType {
     label: Attribute.String;
     description: Attribute.Text;
     icon_url: Attribute.String;
+    icon: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

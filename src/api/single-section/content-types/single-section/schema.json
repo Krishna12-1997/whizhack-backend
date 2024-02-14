@@ -20,6 +20,9 @@
     },
     "icon_url": {
       "type": "string"
+    },
+    "icon": {
+      "type": "string"
     }
   }
 }
