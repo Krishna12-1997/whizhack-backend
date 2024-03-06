@@ -12,10 +12,10 @@ module.exports = [
         "http://whizhack.com",
         "https://www.whizhack.com",
         "http://www.whizhack.com",
+        "https://www.test.whizhack.com",
+        "http://www.test.whizhack.com",
         "https://test.whizhack.com",
         "http://test.whizhack.com",
-        "https://d2vyuniai6aaiz.cloudfront.net",
-        "https://d2eemzopbapqms.cloudfront.net"
       ],
     },
   },
