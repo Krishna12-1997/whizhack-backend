@@ -19,12 +19,6 @@
       "type": "component",
       "repeatable": true,
       "component": "home.links"
-    },
-    "cityname": {
-      "displayName": "City_dropdown",
-      "type": "component",
-      "repeatable": true,
-      "component": "home.city-dropdown"
     }
   }
 }

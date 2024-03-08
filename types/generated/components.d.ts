@@ -323,7 +323,6 @@ export interface HomePartnerContact extends Schema.Component {
     image_url: Attribute.String;
     partner_contact: Attribute.Component<'home.contact', true>;
     product_type: Attribute.Component<'home.links', true>;
-    cityname: Attribute.Component<'home.city-dropdown', true>;
   };
 }
 
