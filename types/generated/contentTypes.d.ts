@@ -1040,6 +1040,37 @@ export interface ApiFooterFooter extends Schema.SingleType {
   };
 }
 
+export interface ApiFooterContactEmailFooterContactEmail
+  extends Schema.CollectionType {
+  collectionName: 'footer_contact_emails';
+  info: {
+    singularName: 'footer-contact-email';
+    pluralName: 'footer-contact-emails';
+    displayName: 'footer_contact_email';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    email: Attribute.Email;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::footer-contact-email.footer-contact-email',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::footer-contact-email.footer-contact-email',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiHidsFeatureHidsFeature extends Schema.CollectionType {
   collectionName: 'hids_features';
   info: {
@@ -2467,6 +2498,7 @@ declare module '@strapi/strapi' {
       'api::cyber-guru.cyber-guru': ApiCyberGuruCyberGuru;
       'api::cyber-module.cyber-module': ApiCyberModuleCyberModule;
       'api::footer.footer': ApiFooterFooter;
+      'api::footer-contact-email.footer-contact-email': ApiFooterContactEmailFooterContactEmail;
       'api::hids-feature.hids-feature': ApiHidsFeatureHidsFeature;
       'api::home.home': ApiHomeHome;
       'api::home-product.home-product': ApiHomeProductHomeProduct;

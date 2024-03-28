@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "footer_contact_emails",
+  "info": {
+    "singularName": "footer-contact-email",
+    "pluralName": "footer-contact-emails",
+    "displayName": "footer_contact_email"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email"
+    }
+  }
+}
