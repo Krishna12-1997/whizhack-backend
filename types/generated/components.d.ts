@@ -520,6 +520,7 @@ export interface NavbarDropdown extends Schema.Component {
   info: {
     displayName: 'dropdown';
     icon: 'arrowDown';
+    description: '';
   };
   attributes: {
     label: Attribute.String;
@@ -528,6 +529,7 @@ export interface NavbarDropdown extends Schema.Component {
       'oneToMany',
       'api::section.section'
     >;
+    url: Attribute.String;
   };
 }
 
