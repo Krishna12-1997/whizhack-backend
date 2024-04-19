@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_zerohack_zerohacks",
+  "info": {
+    "displayName": "zerohack"
+  },
+  "options": {},
+  "attributes": {
+    "bg_url": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

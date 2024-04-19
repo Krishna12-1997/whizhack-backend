@@ -1,0 +1,39 @@
+{
+  "kind": "singleType",
+  "collectionName": "zerohacks",
+  "info": {
+    "singularName": "zerohack",
+    "pluralName": "zerohacks",
+    "displayName": "ZerohackR",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "video": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "description": {
+      "type": "string"
+    },
+    "benefit": {
+      "displayName": "zerohack",
+      "type": "component",
+      "repeatable": false,
+      "component": "zerohack.zerohack"
+    }
+  }
+}

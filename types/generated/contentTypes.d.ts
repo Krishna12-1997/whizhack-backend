@@ -2471,6 +2471,105 @@ export interface ApiWhitePaperDownloadDetailWhitePaperDownloadDetail
   };
 }
 
+export interface ApiZerohackZerohack extends Schema.SingleType {
+  collectionName: 'zerohacks';
+  info: {
+    singularName: 'zerohack';
+    pluralName: 'zerohacks';
+    displayName: 'ZerohackR';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    video: Attribute.Media;
+    description: Attribute.String;
+    benefit: Attribute.Component<'zerohack.zerohack'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::zerohack.zerohack',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::zerohack.zerohack',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiZerohackOtZerohackOt extends Schema.SingleType {
+  collectionName: 'zerohack_ots';
+  info: {
+    singularName: 'zerohack-ot';
+    pluralName: 'zerohack-ots';
+    displayName: 'ZerohackOT';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.String;
+    Feature: Attribute.Component<'zerohack.zerohack'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::zerohack-ot.zerohack-ot',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::zerohack-ot.zerohack-ot',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiZerohackSimZerohackSim extends Schema.SingleType {
+  collectionName: 'zerohack_sims';
+  info: {
+    singularName: 'zerohack-sim';
+    pluralName: 'zerohack-sims';
+    displayName: 'ZerohackSim';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.String;
+    Feature: Attribute.Component<'zerohack.zerohack'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::zerohack-sim.zerohack-sim',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::zerohack-sim.zerohack-sim',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Shared {
     export interface ContentTypes {
@@ -2540,6 +2639,9 @@ declare module '@strapi/strapi' {
       'api::white-paper.white-paper': ApiWhitePaperWhitePaper;
       'api::white-paper-card.white-paper-card': ApiWhitePaperCardWhitePaperCard;
       'api::white-paper-download-detail.white-paper-download-detail': ApiWhitePaperDownloadDetailWhitePaperDownloadDetail;
+      'api::zerohack.zerohack': ApiZerohackZerohack;
+      'api::zerohack-ot.zerohack-ot': ApiZerohackOtZerohackOt;
+      'api::zerohack-sim.zerohack-sim': ApiZerohackSimZerohackSim;
     }
   }
 }

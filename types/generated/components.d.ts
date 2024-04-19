@@ -1027,6 +1027,17 @@ export interface TrainingTrainingProgram extends Schema.Component {
   };
 }
 
+export interface ZerohackZerohack extends Schema.Component {
+  collectionName: 'components_zerohack_zerohacks';
+  info: {
+    displayName: 'zerohack';
+  };
+  attributes: {
+    bg_url: Attribute.String;
+    title: Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Shared {
     export interface Components {
@@ -1097,6 +1108,7 @@ declare module '@strapi/strapi' {
       'training.module-cyber': TrainingModuleCyber;
       'training.program-price': TrainingProgramPrice;
       'training.training-program': TrainingTrainingProgram;
+      'zerohack.zerohack': ZerohackZerohack;
     }
   }
 }
