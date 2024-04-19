@@ -1984,7 +1984,7 @@ export interface ApiSolutionContactSolutionContact
     name: Attribute.String;
     email: Attribute.String;
     message: Attribute.String;
-    mobile: Attribute.BigInteger;
+    organizationName: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

@@ -21,8 +21,8 @@
     "message": {
       "type": "string"
     },
-    "mobile": {
-      "type": "biginteger"
+    "organizationName": {
+      "type": "string"
     }
   }
 }
