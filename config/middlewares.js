@@ -9,7 +9,6 @@ module.exports = [
         "http://13.200.174.138:3000",
         "http://15.207.226.239:1337",
         "http://3.7.59.121:3000",
-        "http://whizrange.whizhack.com",
         "https://whizhack.com",
         "http://whizhack.com",
         "https://www.whizhack.com",
@@ -21,6 +20,7 @@ module.exports = [
       ],
     },
   },
+
 
   "strapi::poweredBy",
   "strapi::logger",
