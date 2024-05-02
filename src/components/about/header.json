@@ -28,22 +28,11 @@
     "bg_url": {
       "type": "string"
     },
-    "Advisor": {
-      "type": "component",
-      "repeatable": false,
-      "component": "about.management"
-    },
     "alliance": {
       "displayName": "Strategicalliance",
       "type": "component",
       "repeatable": false,
       "component": "about.strategicalliance"
-    },
-    "partnership": {
-      "displayName": "Partnership",
-      "type": "component",
-      "repeatable": false,
-      "component": "about.partnership"
     },
     "recognition": {
       "displayName": "Recognition",

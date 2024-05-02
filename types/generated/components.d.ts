@@ -27,9 +27,7 @@ export interface AboutHeader extends Schema.Component {
     story: Attribute.Component<'about.story'>;
     management: Attribute.Component<'about.management', true>;
     bg_url: Attribute.String;
-    Advisor: Attribute.Component<'about.management'>;
     alliance: Attribute.Component<'about.strategicalliance'>;
-    partnership: Attribute.Component<'about.partnership'>;
     recognition: Attribute.Component<'about.recognition'>;
   };
 }
@@ -49,21 +47,6 @@ export interface AboutManagement extends Schema.Component {
     image_url: Attribute.String;
     title: Attribute.String;
     linkedin_url: Attribute.String;
-  };
-}
-
-export interface AboutPartnership extends Schema.Component {
-  collectionName: 'components_about_partnerships';
-  info: {
-    displayName: 'Partnership';
-    icon: 'bulletList';
-    description: '';
-  };
-  attributes: {
-    title: Attribute.String;
-    color_title: Attribute.String;
-    description: Attribute.RichText;
-    image_url: Attribute.String;
   };
 }
 
@@ -1044,7 +1027,6 @@ declare module '@strapi/strapi' {
       'about.button': AboutButton;
       'about.header': AboutHeader;
       'about.management': AboutManagement;
-      'about.partnership': AboutPartnership;
       'about.recognition': AboutRecognition;
       'about.story': AboutStory;
       'about.strategicalliance': AboutStrategicalliance;
