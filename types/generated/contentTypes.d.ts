@@ -1120,11 +1120,7 @@ export interface ApiHomeHome extends Schema.SingleType {
     link: Attribute.Component<'home.links', true>;
     images: Attribute.Component<'home.home-header', true>;
     box: Attribute.Component<'home.box-product', true>;
-    productleft: Attribute.Component<'home.product-left'>;
     contact: Attribute.Component<'home.partner-contact'>;
-    service_compo: Attribute.Component<'home.product-left'>;
-    Institution_contact: Attribute.Component<'home.partner-contact'>;
-    career: Attribute.Component<'home.career-pathway'>;
     bg_url: Attribute.String;
     whizrangeproduct: Attribute.Component<'home.whizrange-section', true>;
     createdAt: Attribute.DateTime;

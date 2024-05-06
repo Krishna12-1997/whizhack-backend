@@ -33,32 +33,11 @@
       "repeatable": true,
       "component": "home.box-product"
     },
-    "productleft": {
-      "type": "component",
-      "repeatable": false,
-      "component": "home.product-left"
-    },
     "contact": {
       "displayName": "Partner_contact",
       "type": "component",
       "repeatable": false,
       "component": "home.partner-contact"
-    },
-    "service_compo": {
-      "type": "component",
-      "repeatable": false,
-      "component": "home.product-left"
-    },
-    "Institution_contact": {
-      "type": "component",
-      "repeatable": false,
-      "component": "home.partner-contact"
-    },
-    "career": {
-      "displayName": "Career_pathway",
-      "type": "component",
-      "repeatable": false,
-      "component": "home.career-pathway"
     },
     "bg_url": {
       "type": "string"
