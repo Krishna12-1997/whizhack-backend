@@ -37,6 +37,9 @@
       "type": "component",
       "repeatable": true,
       "component": "blog.blog-detail"
+    },
+    "blog_upload_date": {
+      "type": "date"
     }
   }
 }

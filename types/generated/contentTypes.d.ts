@@ -1401,6 +1401,7 @@ export interface ApiLatestBlogLatestBlog extends Schema.CollectionType {
     small_label: Attribute.String;
     tag: Attribute.String;
     Single_blog_details: Attribute.Component<'blog.blog-detail', true>;
+    blog_upload_date: Attribute.Date;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
