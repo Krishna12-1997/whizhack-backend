@@ -4,7 +4,8 @@
   "info": {
     "singularName": "media-coverage",
     "pluralName": "media-coverages",
-    "displayName": "mediaCoverage"
+    "displayName": "mediaCoverage",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true

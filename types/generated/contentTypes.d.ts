@@ -1426,6 +1426,7 @@ export interface ApiMediaCoverageMediaCoverage extends Schema.SingleType {
     singularName: 'media-coverage';
     pluralName: 'media-coverages';
     displayName: 'mediaCoverage';
+    description: '';
   };
   options: {
     draftAndPublish: true;

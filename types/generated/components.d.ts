@@ -502,12 +502,14 @@ export interface MediaMedia extends Schema.Component {
   collectionName: 'components_media_media';
   info: {
     displayName: 'media';
+    description: '';
   };
   attributes: {
     image_url: Attribute.String;
     media_title: Attribute.String;
     description: Attribute.Text;
     media_upload_date: Attribute.Date;
+    redirect_url: Attribute.Text;
   };
 }
 
