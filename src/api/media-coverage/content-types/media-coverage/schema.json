@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "media_coverages",
+  "info": {
+    "singularName": "media-coverage",
+    "pluralName": "media-coverages",
+    "displayName": "mediaCoverage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "media_content": {
+      "displayName": "media",
+      "type": "component",
+      "repeatable": true,
+      "component": "media.media"
+    }
+  }
+}

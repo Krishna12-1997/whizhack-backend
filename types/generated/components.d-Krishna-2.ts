@@ -498,19 +498,6 @@ export interface InvestorRelationPartnerAdvisor extends Schema.Component {
   };
 }
 
-export interface MediaMedia extends Schema.Component {
-  collectionName: 'components_media_media';
-  info: {
-    displayName: 'media';
-  };
-  attributes: {
-    image_url: Attribute.String;
-    media_title: Attribute.String;
-    description: Attribute.Text;
-    media_upload_date: Attribute.Date;
-  };
-}
-
 export interface NavbarDropdown extends Schema.Component {
   collectionName: 'components_navbar_dropdowns';
   info: {
@@ -1072,7 +1059,6 @@ declare module '@strapi/strapi' {
       'investor-relation.financial-year': InvestorRelationFinancialYear;
       'investor-relation.investor-shareholder': InvestorRelationInvestorShareholder;
       'investor-relation.partner-advisor': InvestorRelationPartnerAdvisor;
-      'media.media': MediaMedia;
       'navbar.dropdown': NavbarDropdown;
       'navbar.menu': NavbarMenu;
       'navbar.single-dropdown': NavbarSingleDropdown;

@@ -1420,36 +1420,6 @@ export interface ApiLatestBlogLatestBlog extends Schema.CollectionType {
   };
 }
 
-export interface ApiMediaCoverageMediaCoverage extends Schema.SingleType {
-  collectionName: 'media_coverages';
-  info: {
-    singularName: 'media-coverage';
-    pluralName: 'media-coverages';
-    displayName: 'mediaCoverage';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    media_content: Attribute.Component<'media.media', true>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::media-coverage.media-coverage',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::media-coverage.media-coverage',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiPartnerPartner extends Schema.SingleType {
   collectionName: 'partners';
   info: {
@@ -2498,32 +2468,6 @@ export interface ApiWhitePaperDownloadDetailWhitePaperDownloadDetail
   };
 }
 
-export interface ApiXdrXdr extends Schema.CollectionType {
-  collectionName: 'xdrs';
-  info: {
-    singularName: 'xdr';
-    pluralName: 'xdrs';
-    displayName: 'XDR';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    title: Attribute.String & Attribute.Required;
-    desc: Attribute.Text & Attribute.Required;
-    small_title: Attribute.String & Attribute.Required;
-    media: Attribute.Media;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::xdr.xdr', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<'api::xdr.xdr', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-  };
-}
-
 export interface ApiZerohackZerohack extends Schema.SingleType {
   collectionName: 'zerohacks';
   info: {
@@ -2661,7 +2605,6 @@ declare module '@strapi/strapi' {
       'api::investor.investor': ApiInvestorInvestor;
       'api::investor-relation.investor-relation': ApiInvestorRelationInvestorRelation;
       'api::latest-blog.latest-blog': ApiLatestBlogLatestBlog;
-      'api::media-coverage.media-coverage': ApiMediaCoverageMediaCoverage;
       'api::partner.partner': ApiPartnerPartner;
       'api::partner-content.partner-content': ApiPartnerContentPartnerContent;
       'api::privacy-policy.privacy-policy': ApiPrivacyPolicyPrivacyPolicy;
@@ -2693,7 +2636,6 @@ declare module '@strapi/strapi' {
       'api::white-paper.white-paper': ApiWhitePaperWhitePaper;
       'api::white-paper-card.white-paper-card': ApiWhitePaperCardWhitePaperCard;
       'api::white-paper-download-detail.white-paper-download-detail': ApiWhitePaperDownloadDetailWhitePaperDownloadDetail;
-      'api::xdr.xdr': ApiXdrXdr;
       'api::zerohack.zerohack': ApiZerohackZerohack;
       'api::zerohack-ot.zerohack-ot': ApiZerohackOtZerohackOt;
       'api::zerohack-sim.zerohack-sim': ApiZerohackSimZerohackSim;

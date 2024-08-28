@@ -1420,36 +1420,6 @@ export interface ApiLatestBlogLatestBlog extends Schema.CollectionType {
   };
 }
 
-export interface ApiMediaCoverageMediaCoverage extends Schema.SingleType {
-  collectionName: 'media_coverages';
-  info: {
-    singularName: 'media-coverage';
-    pluralName: 'media-coverages';
-    displayName: 'mediaCoverage';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    media_content: Attribute.Component<'media.media', true>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::media-coverage.media-coverage',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::media-coverage.media-coverage',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiPartnerPartner extends Schema.SingleType {
   collectionName: 'partners';
   info: {
@@ -2661,7 +2631,6 @@ declare module '@strapi/strapi' {
       'api::investor.investor': ApiInvestorInvestor;
       'api::investor-relation.investor-relation': ApiInvestorRelationInvestorRelation;
       'api::latest-blog.latest-blog': ApiLatestBlogLatestBlog;
-      'api::media-coverage.media-coverage': ApiMediaCoverageMediaCoverage;
       'api::partner.partner': ApiPartnerPartner;
       'api::partner-content.partner-content': ApiPartnerContentPartnerContent;
       'api::privacy-policy.privacy-policy': ApiPrivacyPolicyPrivacyPolicy;

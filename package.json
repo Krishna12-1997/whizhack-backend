@@ -19,7 +19,7 @@
     "better-sqlite3": "8.6.0",
     "mongodb": "^6.1.0",
     "nodemailer": "^6.9.13",
-    "pg": "^8.11.3",
+    "pg": "^8.12.0",
     "strapi-connector-mongoose": "^3.6.11"
   },
   "author": {
