@@ -1382,6 +1382,41 @@ export interface ApiInvestorRelationInvestorRelation extends Schema.SingleType {
   };
 }
 
+export interface ApiJobApplicationJobApplication extends Schema.CollectionType {
+  collectionName: 'job_applications';
+  info: {
+    singularName: 'job-application';
+    pluralName: 'job-applications';
+    displayName: 'JobApplication';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    fullName: Attribute.String;
+    email: Attribute.Email;
+    MobileNumber: Attribute.String;
+    linkdinUrl: Attribute.String;
+    Resume: Attribute.Media;
+    coverLetter: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::job-application.job-application',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::job-application.job-application',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiLatestBlogLatestBlog extends Schema.CollectionType {
   collectionName: 'latest_blogs';
   info: {
@@ -2661,6 +2696,7 @@ declare module '@strapi/strapi' {
       'api::institution-contact.institution-contact': ApiInstitutionContactInstitutionContact;
       'api::investor.investor': ApiInvestorInvestor;
       'api::investor-relation.investor-relation': ApiInvestorRelationInvestorRelation;
+      'api::job-application.job-application': ApiJobApplicationJobApplication;
       'api::latest-blog.latest-blog': ApiLatestBlogLatestBlog;
       'api::media-coverage.media-coverage': ApiMediaCoverageMediaCoverage;
       'api::partner.partner': ApiPartnerPartner;
