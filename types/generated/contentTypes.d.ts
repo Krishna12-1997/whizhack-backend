@@ -1388,6 +1388,7 @@ export interface ApiJobApplicationJobApplication extends Schema.CollectionType {
     singularName: 'job-application';
     pluralName: 'job-applications';
     displayName: 'JobApplication';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1399,6 +1400,7 @@ export interface ApiJobApplicationJobApplication extends Schema.CollectionType {
     linkdinUrl: Attribute.String;
     Resume: Attribute.Media;
     coverLetter: Attribute.Media;
+    appliedFor: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
