@@ -20,14 +20,8 @@ module.exports = createCoreController(
           cover,
           appliedFor,
         } = ctx.request.body;
-        // const { files } = ctx.request;
-        // const resume = files?.resume;
-        // console.log("resume Files id:", resume.id);
-        console.log(resume);
 
-        // const cover = files?.coverLetter;
-
-        const result = await strapi.entityService.create(
+        const newApplication = await strapi.entityService.create(
           "api::job-application.job-application",
           {
             data: {
@@ -42,43 +36,47 @@ module.exports = createCoreController(
           }
         );
 
-        // // Email configuration
-        // const transporter = nodemailer.createTransport({
-        //   service: "gmail",
-        //   auth: {
-        //     user: process.env.EMAIL_ID,
-        //     pass: process.env.EMAIL_ID_PASSWORD,
-        //   },
-        // });
+        if (resume) {
+          const resumeFileEntry = await strapi.plugins[
+            "upload"
+          ].services.upload.findOne(resume);
+          // console.log(resumeFileEntry.url);
 
-        // // Email details
-        // const mailOptions = {
-        //   from: email,
-        //   to: process.env.EMAIL_ID,    
-        //   subject: `Resume For Position ${appliedFor}`,
-        //   text: `Dear HR Team,
+          if (resumeFileEntry) {
+            const fileUrl = `${process.env.STRAPI_URL}${resumeFileEntry.url}`;
+            // console.log(fileUrl);
+
+            await strapi.plugins["email"].services.email.send({
+              to: "hr@whizhack.com", // Recipient email
+              from: "info@whizhack.com", // Sender email address
+              subject: "Your Job Application Submission",
+              text: `Dear HR Team,
   
-        //       A new job application has been submitted for the position: ${appliedFor}. Below are the details of the applicant:
+              A new job application has been submitted for the position: ${appliedFor}. Below are the details of the applicant:
   
-        //       Full Name: ${fullName}
-        //       Mobile Number: ${mobileNumber}
-        //       Email: ${email}
-        //       LinkedIn URL: ${linkedin}
-        //       Resume: ${resume ? resume : "Not provided"}
-        //       Cover Letter: ${cover ? cover : "Not provided"}`,
-        //  };
+              Full Name: ${fullName}
+              Mobile Number: ${mobileNumber}
+              Email: ${email}
+              LinkedIn URL: ${linkedin}`,
+              attachments: [
+                {
+                  filename: resumeFileEntry.name,
+                  path: fileUrl,
+                },
+              ],
+            });
+            console.log("Email sent successfully with the resume attached.");
+          } else {
+            console.log("Resume file not found");
+          }
+        }
 
-        // // Send email
-        // await transporter.sendMail(mailOptions);
-
-        ctx.send({ success: true, result });
+        ctx.send({ success: true, newApplication });
       } catch (error) {
-        console.error("Error submitting job application:", error);
-        ctx.send(
-          { success: false, message: "Error submitting job application" },
-          500
-        );
+        console.error("Error creating job application:", error);
+        ctx.send({ error: "Failed to create job application." }, 500);
       }
     },
   })
 );
+
