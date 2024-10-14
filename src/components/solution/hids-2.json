@@ -25,11 +25,6 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::about-cyber.about-cyber"
-    },
-    "hids_features": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::hids-feature.hids-feature"
     }
   }
 }

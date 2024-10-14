@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_career_benefits",
+  "info": {
+    "displayName": "benefits",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "benefit_list": {
+      "type": "text"
+    }
+  }
+}

@@ -808,11 +808,7 @@ export interface ApiCareerPathwayCareerPathway extends Schema.SingleType {
     draftAndPublish: true;
   };
   attributes: {
-    bg_url: Attribute.String;
-    title: Attribute.String;
-    description: Attribute.Text;
-    career_path_video: Attribute.Component<'career.career-video', true>;
-    career_programs: Attribute.Relation<
+    careers: Attribute.Relation<
       'api::career-pathway.career-pathway',
       'oneToMany',
       'api::career-program.career-program'
@@ -840,19 +836,24 @@ export interface ApiCareerProgramCareerProgram extends Schema.CollectionType {
   info: {
     singularName: 'career-program';
     pluralName: 'career-programs';
-    displayName: 'Career_program';
+    displayName: 'career';
     description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    title: Attribute.String;
-    small_title: Attribute.Text;
-    description: Attribute.Text;
-    duration: Attribute.Component<'career.career-duration'>;
-    module: Attribute.Component<'career.career-module', true>;
-    image_url: Attribute.String;
+    job_title: Attribute.String;
+    experience: Attribute.String;
+    location: Attribute.String & Attribute.DefaultTo<'Gurugram'>;
+    posted_date: Attribute.Date;
+    qualification: Attribute.Component<'career.qualifications', true>;
+    preferred_qualifications: Attribute.Component<
+      'career.preferred-qualification',
+      true
+    >;
+    benefits: Attribute.Component<'career.benefits', true>;
+    responsibilities: Attribute.Component<'career.responsibility', true>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -939,71 +940,6 @@ export interface ApiContactFormContactForm extends Schema.SingleType {
   };
 }
 
-export interface ApiCyberGuruCyberGuru extends Schema.CollectionType {
-  collectionName: 'cyber_gurus';
-  info: {
-    singularName: 'cyber-guru';
-    pluralName: 'cyber-gurus';
-    displayName: 'cyber_guru';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    bg_url: Attribute.String;
-    small_title: Attribute.String;
-    title: Attribute.String;
-    price: Attribute.Component<'training.program-price', true>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::cyber-guru.cyber-guru',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::cyber-guru.cyber-guru',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiCyberModuleCyberModule extends Schema.CollectionType {
-  collectionName: 'cyber_modules';
-  info: {
-    singularName: 'cyber-module';
-    pluralName: 'cyber-modules';
-    displayName: 'Cyber_module';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    title: Attribute.String;
-    cyber_module: Attribute.Component<'training.module-cyber', true>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::cyber-module.cyber-module',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::cyber-module.cyber-module',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiFooterFooter extends Schema.SingleType {
   collectionName: 'footers';
   info: {
@@ -1064,38 +1000,6 @@ export interface ApiFooterContactEmailFooterContactEmail
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::footer-contact-email.footer-contact-email',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiHidsFeatureHidsFeature extends Schema.CollectionType {
-  collectionName: 'hids_features';
-  info: {
-    singularName: 'hids-feature';
-    pluralName: 'hids-features';
-    displayName: 'Hids_feature';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    title: Attribute.String;
-    feature_hids: Attribute.Component<'solution.hids-feauter', true>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::hids-feature.hids-feature',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::hids-feature.hids-feature',
       'oneToOne',
       'admin::user'
     > &
@@ -2685,11 +2589,8 @@ declare module '@strapi/strapi' {
       'api::career-program.career-program': ApiCareerProgramCareerProgram;
       'api::contact-detail.contact-detail': ApiContactDetailContactDetail;
       'api::contact-form.contact-form': ApiContactFormContactForm;
-      'api::cyber-guru.cyber-guru': ApiCyberGuruCyberGuru;
-      'api::cyber-module.cyber-module': ApiCyberModuleCyberModule;
       'api::footer.footer': ApiFooterFooter;
       'api::footer-contact-email.footer-contact-email': ApiFooterContactEmailFooterContactEmail;
-      'api::hids-feature.hids-feature': ApiHidsFeatureHidsFeature;
       'api::home.home': ApiHomeHome;
       'api::home-product.home-product': ApiHomeProductHomeProduct;
       'api::industry.industry': ApiIndustryIndustry;

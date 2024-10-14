@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_career_responsibilities",
+  "info": {
+    "displayName": "responsibility",
+    "icon": "bulletList",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "responsibilitie_list": {
+      "type": "string"
+    }
+  }
+}

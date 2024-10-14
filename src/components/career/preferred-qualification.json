@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_career_preferred_qualifications",
+  "info": {
+    "displayName": "preferred_qualification",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "preferred_qualification_list": {
+      "type": "text"
+    }
+  }
+}

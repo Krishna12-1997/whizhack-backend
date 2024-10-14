@@ -4,7 +4,7 @@
   "info": {
     "singularName": "career-program",
     "pluralName": "career-programs",
-    "displayName": "Career_program",
+    "displayName": "career",
     "description": ""
   },
   "options": {
@@ -12,28 +12,41 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
+    "job_title": {
       "type": "string"
     },
-    "small_title": {
-      "type": "text"
+    "experience": {
+      "type": "string"
     },
-    "description": {
-      "type": "text"
+    "location": {
+      "type": "string",
+      "default": "Gurugram"
     },
-    "duration": {
-      "displayName": "career_duration",
-      "type": "component",
-      "repeatable": false,
-      "component": "career.career-duration"
+    "posted_date": {
+      "type": "date"
     },
-    "module": {
+    "qualification": {
+      "displayName": "qualifications",
       "type": "component",
       "repeatable": true,
-      "component": "career.career-module"
+      "component": "career.qualifications"
     },
-    "image_url": {
-      "type": "string"
+    "preferred_qualifications": {
+      "displayName": "preferred_qualification",
+      "type": "component",
+      "repeatable": true,
+      "component": "career.preferred-qualification"
+    },
+    "benefits": {
+      "displayName": "benefits",
+      "type": "component",
+      "repeatable": true,
+      "component": "career.benefits"
+    },
+    "responsibilities": {
+      "type": "component",
+      "repeatable": true,
+      "component": "career.responsibility"
     }
   }
 }

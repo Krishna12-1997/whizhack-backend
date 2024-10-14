@@ -12,22 +12,7 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "bg_url": {
-      "type": "string"
-    },
-    "title": {
-      "type": "string"
-    },
-    "description": {
-      "type": "text"
-    },
-    "career_path_video": {
-      "displayName": "career_video",
-      "type": "component",
-      "repeatable": true,
-      "component": "career.career-video"
-    },
-    "career_programs": {
+    "careers": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::career-program.career-program"

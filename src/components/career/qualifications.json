@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_career_qualifications",
+  "info": {
+    "displayName": "qualifications",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "qualification_list": {
+      "type": "text"
+    }
+  }
+}

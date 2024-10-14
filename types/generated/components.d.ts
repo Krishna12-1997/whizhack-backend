@@ -139,15 +139,14 @@ export interface BlogLatestBlog extends Schema.Component {
   };
 }
 
-export interface CareerCareerDuration extends Schema.Component {
-  collectionName: 'components_career_career_durations';
+export interface CareerBenefits extends Schema.Component {
+  collectionName: 'components_career_benefits';
   info: {
-    displayName: 'career_duration';
+    displayName: 'benefits';
     icon: 'bulletList';
   };
   attributes: {
-    title: Attribute.String;
-    description: Attribute.Text;
+    benefit_list: Attribute.Text;
   };
 }
 
@@ -170,6 +169,40 @@ export interface CareerCareerVideo extends Schema.Component {
   };
   attributes: {
     video_url: Attribute.String;
+  };
+}
+
+export interface CareerPreferredQualification extends Schema.Component {
+  collectionName: 'components_career_preferred_qualifications';
+  info: {
+    displayName: 'preferred_qualification';
+    icon: 'bulletList';
+  };
+  attributes: {
+    preferred_qualification_list: Attribute.Text;
+  };
+}
+
+export interface CareerQualifications extends Schema.Component {
+  collectionName: 'components_career_qualifications';
+  info: {
+    displayName: 'qualifications';
+    icon: 'bulletList';
+  };
+  attributes: {
+    qualification_list: Attribute.Text;
+  };
+}
+
+export interface CareerResponsibility extends Schema.Component {
+  collectionName: 'components_career_responsibilities';
+  info: {
+    displayName: 'responsibility';
+    icon: 'bulletList';
+    description: '';
+  };
+  attributes: {
+    responsibilitie_list: Attribute.String;
   };
 }
 
@@ -746,11 +779,6 @@ export interface SolutionHids2 extends Schema.Component {
       'oneToMany',
       'api::about-cyber.about-cyber'
     >;
-    hids_features: Attribute.Relation<
-      'solution.hids-2',
-      'oneToMany',
-      'api::hids-feature.hids-feature'
-    >;
   };
 }
 
@@ -1007,20 +1035,10 @@ export interface TrainingTrainingProgram extends Schema.Component {
     title: Attribute.String;
     small_title: Attribute.String;
     description: Attribute.Text;
-    cyber_gurus: Attribute.Relation<
-      'training.training-program',
-      'oneToMany',
-      'api::cyber-guru.cyber-guru'
-    >;
     about_cybers: Attribute.Relation<
       'training.training-program',
       'oneToMany',
       'api::about-cyber.about-cyber'
-    >;
-    cyber_modules: Attribute.Relation<
-      'training.training-program',
-      'oneToMany',
-      'api::cyber-module.cyber-module'
     >;
   };
 }
@@ -1048,9 +1066,12 @@ declare module '@strapi/strapi' {
       'blog.all-blog': BlogAllBlog;
       'blog.blog-detail': BlogBlogDetail;
       'blog.latest-blog': BlogLatestBlog;
-      'career.career-duration': CareerCareerDuration;
+      'career.benefits': CareerBenefits;
       'career.career-module': CareerCareerModule;
       'career.career-video': CareerCareerVideo;
+      'career.preferred-qualification': CareerPreferredQualification;
+      'career.qualifications': CareerQualifications;
+      'career.responsibility': CareerResponsibility;
       'footer.left-footer-link': FooterLeftFooterLink;
       'home.box-product': HomeBoxProduct;
       'home.button': HomeButton;
