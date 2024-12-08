@@ -43,13 +43,13 @@ module.exports = createCoreController(
           // console.log(resumeFileEntry.url);
 
           if (resumeFileEntry) {
-            const fileUrl = `${process.env.STRAPI_URL}${resumeFileEntry.url}`;
+            const fileUrl = `https://test.whizhack.com/${resumeFileEntry.url}`;
             // console.log(fileUrl);
 
             await strapi.plugins["email"].services.email.send({
-              to: "hr@whizhack.com", // Recipient email
-              from: "info@whizhack.com", // Sender email address
-              subject: "Your Job Application Submission",
+              to: "hr@whizhack.com",
+              from: "info@whizhack.com", 
+              subject: "Job Application",
               text: `Dear HR Team,
   
               A new job application has been submitted for the position: ${appliedFor}. Below are the details of the applicant:
