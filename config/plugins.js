@@ -6,12 +6,12 @@ module.exports = ({ env }) => ({
       port: 465,
       secure: true,
       auth: {
-        user: env("AWS_SES_ACCESS_KEY_ID"), // Your AWS SES SMTP user
-        pass: env("AWS_SES_SECRET_ACCESS_KEY"), // Your AWS SES SMTP password
+        user: env("AWS_SES_ACCESS_KEY_ID"), 
+        pass: env("AWS_SES_SECRET_ACCESS_KEY"),
       },
     },
     settings: {
-      defaultFrom: "info@whizhack.com", // The default sender email
+      defaultFrom: "info@whizhack.com",
       defaultReplyTo: "hr@whizhack.com",
     },
   },

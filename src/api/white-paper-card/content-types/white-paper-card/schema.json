@@ -4,7 +4,7 @@
   "info": {
     "singularName": "white-paper-card",
     "pluralName": "white-paper-cards",
-    "displayName": "White_paper_card",
+    "displayName": "White Paper",
     "description": ""
   },
   "options": {
@@ -19,7 +19,14 @@
       "type": "text"
     },
     "pdf_url": {
-      "type": "string"
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

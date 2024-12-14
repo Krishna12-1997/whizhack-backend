@@ -27,6 +27,17 @@ const config = {
     // 'zh-Hans',
     // 'zh',
   ],
+  auth: {
+    logo: "./extensions/logo.png",
+  },
+  // Replace the favicon
+  head: {
+    favicon: "./extensions/logo.png",
+  },
+  menu: {
+    logo: "./extensions/logo.png",
+  },
+  tutorials: false,
 };
 
 const bootstrap = (app) => {

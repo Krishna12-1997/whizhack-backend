@@ -2230,116 +2230,12 @@ export interface ApiTrainingTraining extends Schema.SingleType {
   };
 }
 
-export interface ApiUseCaseUseCase extends Schema.SingleType {
-  collectionName: 'use_cases';
-  info: {
-    singularName: 'use-case';
-    pluralName: 'use-cases';
-    displayName: 'Use_case';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    title: Attribute.String;
-    description: Attribute.Text;
-    bg_url: Attribute.String;
-    use_case_cards: Attribute.Relation<
-      'api::use-case.use-case',
-      'oneToMany',
-      'api::use-case-card.use-case-card'
-    >;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::use-case.use-case',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::use-case.use-case',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 export interface ApiUseCaseCardUseCaseCard extends Schema.CollectionType {
   collectionName: 'use_case_cards';
   info: {
     singularName: 'use-case-card';
     pluralName: 'use-case-cards';
-    displayName: 'Use_case_card';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    title: Attribute.String;
-    description: Attribute.Text;
-    pdf_url: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::use-case-card.use-case-card',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::use-case-card.use-case-card',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiUseCaseDownloadDetailUseCaseDownloadDetail
-  extends Schema.CollectionType {
-  collectionName: 'use_case_download_details';
-  info: {
-    singularName: 'use-case-download-detail';
-    pluralName: 'use-case-download-details';
-    displayName: 'Use_case_download_detail';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    name: Attribute.String;
-    contact: Attribute.BigInteger;
-    email: Attribute.Email;
-    companyName: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::use-case-download-detail.use-case-download-detail',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::use-case-download-detail.use-case-download-detail',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiWhitePaperWhitePaper extends Schema.SingleType {
-  collectionName: 'white_papers';
-  info: {
-    singularName: 'white-paper';
-    pluralName: 'white-papers';
-    displayName: 'White_paper';
+    displayName: 'Use Case';
     description: '';
   };
   options: {
@@ -2348,23 +2244,18 @@ export interface ApiWhitePaperWhitePaper extends Schema.SingleType {
   attributes: {
     title: Attribute.String;
     description: Attribute.Text;
-    bg_url: Attribute.String;
-    white_paper_cards: Attribute.Relation<
-      'api::white-paper.white-paper',
-      'oneToMany',
-      'api::white-paper-card.white-paper-card'
-    >;
+    pdf_url: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
-      'api::white-paper.white-paper',
+      'api::use-case-card.use-case-card',
       'oneToOne',
       'admin::user'
     > &
       Attribute.Private;
     updatedBy: Attribute.Relation<
-      'api::white-paper.white-paper',
+      'api::use-case-card.use-case-card',
       'oneToOne',
       'admin::user'
     > &
@@ -2377,7 +2268,7 @@ export interface ApiWhitePaperCardWhitePaperCard extends Schema.CollectionType {
   info: {
     singularName: 'white-paper-card';
     pluralName: 'white-paper-cards';
-    displayName: 'White_paper_card';
+    displayName: 'White Paper';
     description: '';
   };
   options: {
@@ -2386,7 +2277,7 @@ export interface ApiWhitePaperCardWhitePaperCard extends Schema.CollectionType {
   attributes: {
     title: Attribute.String;
     description: Attribute.Text;
-    pdf_url: Attribute.String;
+    pdf_url: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -2398,41 +2289,6 @@ export interface ApiWhitePaperCardWhitePaperCard extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::white-paper-card.white-paper-card',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiWhitePaperDownloadDetailWhitePaperDownloadDetail
-  extends Schema.CollectionType {
-  collectionName: 'white_paper_download_details';
-  info: {
-    singularName: 'white-paper-download-detail';
-    pluralName: 'white-paper-download-details';
-    displayName: 'white_paper_download_detail';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    name: Attribute.String;
-    contact: Attribute.BigInteger;
-    email: Attribute.Email;
-    companyName: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::white-paper-download-detail.white-paper-download-detail',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::white-paper-download-detail.white-paper-download-detail',
       'oneToOne',
       'admin::user'
     > &
@@ -2627,12 +2483,8 @@ declare module '@strapi/strapi' {
       'api::trace.trace': ApiTraceTrace;
       'api::trace-benefit.trace-benefit': ApiTraceBenefitTraceBenefit;
       'api::training.training': ApiTrainingTraining;
-      'api::use-case.use-case': ApiUseCaseUseCase;
       'api::use-case-card.use-case-card': ApiUseCaseCardUseCaseCard;
-      'api::use-case-download-detail.use-case-download-detail': ApiUseCaseDownloadDetailUseCaseDownloadDetail;
-      'api::white-paper.white-paper': ApiWhitePaperWhitePaper;
       'api::white-paper-card.white-paper-card': ApiWhitePaperCardWhitePaperCard;
-      'api::white-paper-download-detail.white-paper-download-detail': ApiWhitePaperDownloadDetailWhitePaperDownloadDetail;
       'api::xdr.xdr': ApiXdrXdr;
       'api::zerohack.zerohack': ApiZerohackZerohack;
       'api::zerohack-ot.zerohack-ot': ApiZerohackOtZerohackOt;
