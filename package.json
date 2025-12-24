@@ -16,9 +16,12 @@
     "@strapi/provider-upload-aws-s3": "^4.17.1",
     "@strapi/strapi": "4.13.7",
     "aws-s3": "^2.0.5",
+    "aws-sdk": "^2.1693.0",
     "better-sqlite3": "8.6.0",
+    "i": "^0.3.7",
     "mongodb": "^6.1.0",
     "nodemailer": "^6.9.13",
+    "npm": "^11.7.0",
     "pg": "^8.12.0",
     "strapi-connector-mongoose": "^3.6.11"
   },
