@@ -1007,36 +1007,6 @@ export interface ApiFooterContactEmailFooterContactEmail
   };
 }
 
-export interface ApiHomeHome extends Schema.SingleType {
-  collectionName: 'homes';
-  info: {
-    singularName: 'home';
-    pluralName: 'homes';
-    displayName: 'Home';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    title: Attribute.String;
-    logo_url: Attribute.String;
-    link: Attribute.Component<'home.links', true>;
-    images: Attribute.Component<'home.home-header', true>;
-    box: Attribute.Component<'home.box-product', true>;
-    contact: Attribute.Component<'home.partner-contact'>;
-    bg_url: Attribute.String;
-    whizrangeproduct: Attribute.Component<'home.whizrange-section', true>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<'api::home.home', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<'api::home.home', 'oneToOne', 'admin::user'> &
-      Attribute.Private;
-  };
-}
-
 export interface ApiHomeProductHomeProduct extends Schema.CollectionType {
   collectionName: 'home_products';
   info: {
@@ -2447,7 +2417,6 @@ declare module '@strapi/strapi' {
       'api::contact-form.contact-form': ApiContactFormContactForm;
       'api::footer.footer': ApiFooterFooter;
       'api::footer-contact-email.footer-contact-email': ApiFooterContactEmailFooterContactEmail;
-      'api::home.home': ApiHomeHome;
       'api::home-product.home-product': ApiHomeProductHomeProduct;
       'api::industry.industry': ApiIndustryIndustry;
       'api::industry-left.industry-left': ApiIndustryLeftIndustryLeft;
